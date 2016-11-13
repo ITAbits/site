@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/site/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -21505,7 +21505,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'Waiting to start'
+	        'Waiting for developers...'
 	      );
 	    }
 	  }]);
