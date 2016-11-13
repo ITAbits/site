@@ -4,7 +4,7 @@
   "description": "Website for itabits",
   "main": "index.jsx",
   "scripts": {
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d public",
     "watch": "webpack --watch"
   },
   "author": "ITABits",
