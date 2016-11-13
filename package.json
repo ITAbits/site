@@ -4,7 +4,8 @@
   "description": "Website for itabits",
   "main": "index.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d build",
+    "watch": "webpack --watch"
   },
   "author": "ITABits",
   "license": "ISC",
