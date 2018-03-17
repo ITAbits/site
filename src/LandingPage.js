@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Article from 'grommet/components/Article'
-import Box from 'grommet/components/Box'
 import Section from 'grommet/components/Section'
 import Title from 'grommet/components/Title'
 import WorldMap from 'grommet/components/WorldMap'
