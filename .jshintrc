@@ -1,7 +1,0 @@
-{
-  "esversion": 6,
-  "strict": "implied",
-  "browserify": true,
-  "unused": true,
-  "undef": true
-}
