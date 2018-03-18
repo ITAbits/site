@@ -1,15 +1,26 @@
 {
   "name": "site",
   "version": "0.1.0",
+  "homepage": "https://www.itabits.com.br",
   "private": true,
   "dependencies": {
-    "grommet": "^1.10.1",
-    "grommet-css": "^1.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "semantic-ui-css": "^2.3.0",
+    "semantic-ui-react": "^0.78.3"
   },
-  "homepage": "https://www.itabits.com.br",
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "ignore": [
+      "node_modules/**",
+      "src/registerServiceWorker.js"
+    ],
+    "parser": "babel-eslint"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -17,8 +28,5 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build && echo %npm_package_homepage% > ./build/CNAME && sed -i 's/https\\?:\\/\\///g' ./build/CNAME",
     "deploy": "gh-pages -d build"
-  },
-  "devDependencies": {
-    "gh-pages": "^1.1.0"
   }
 }
