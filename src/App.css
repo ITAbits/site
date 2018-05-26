@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: lightslategrey;
+    background-color: #7289da;
 }
 
 h1,
@@ -24,6 +24,8 @@ strong {
 }
 
 section {
+    margin-right: 5%;
+    margin-left: 5%;
     padding: 6rem 0;
 }
 
@@ -148,14 +150,26 @@ hr.sub {
 
 .card .card-content {
     padding: 2%;
+    background-color: lightslategrey;
+    border-radius: 10px;
+    transition-property: position;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    /* color: #ffffff; */
+}
 
+.card:hover {
+    position: relative;
+    top: -5px;
 }
 
 .row .col.card {
-    padding: 20px 4px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, .2);
-    margin-top: 0.5%;
-    margin-bottom: 0;
+    padding: 4px 4px;
+    box-shadow: 0px 1px 0px rgba(119, 136, 153, 1);
+    margin: 0.5%;
+    /* background-color: lightslategrey; */
+    border-radius: 10px;
+    background-color: #333333;
 }
 
 .card .card-title {
