@@ -1,15 +1,20 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# dependencies
+### IDE configurations
+
+## WebStorm
+.idea/
+
+### dependencies
 /node_modules
 
-# testing
+### testing
 /coverage
 
-# production
+### production
 /build
 
-# misc
+### misc
 .DS_Store
 .env.local
 .env.development.local
