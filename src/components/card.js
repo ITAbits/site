@@ -1,4 +1,5 @@
 import React from 'react';
+import GifPlayer from 'react-gif-player';
 
 export default props =>{
   let demoBtn = null;
@@ -8,7 +9,7 @@ export default props =>{
   return(
     <div className="card col m6 s12 l4">
       <div className="card-image waves-effect waves-block waves-light">
-        <img className="activator work-img" src={props.src} alt={props.alt}/>
+        <GifPlayer className="project-image" gif={props.gif} still={props.src} />
       </div>
       <div className="card-content">
         <span className="card-title activator">{props.title}<i className="material-icons right">add</i></span>
