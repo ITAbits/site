@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { Segment, Container, Header, Grid } from 'semantic-ui-react'
 
-import { people } from './data'
+import { people } from './assets/data'
 
 function Person (props) {
   return (
