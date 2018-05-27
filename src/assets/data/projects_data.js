@@ -1,9 +1,11 @@
 import balanceimg from '../images/projects/balance.png'
 import overheadimg from '../images/projects/overhead.png'
+import pandoodleimg from '../images/projects/pandoodle.jpg'
+import ricochetteimg from '../images/projects/ricochette.png'
 
 import balancegif from '../images/projects/balance.gif'
 import overheadgif from '../images/projects/overhead.gif'
-//import ricochette from '../images/projects/ricochette.png'
+import pandooldegif from '../images/projects/pandoodle.gif'
 
 export default [
   {
@@ -25,6 +27,16 @@ export default [
     developers: 'Carlos Matheus, Francisco Castro and Luiz Henrique Aguiar',
     codeLink: 'https://github.com/CarlosMatheus/Overhead',
     demoLink: 'https://chicomcastro.itch.io/overhead'
+  },
+  {
+    name: 'Pandoodle',
+    info: 'Drawing puzzle! Get the right colors and the least amount of ink!',
+    img: pandoodleimg,
+    gif: pandooldegif,
+    alt: 'Pandoodle',
+    developers: 'Vinicius Canaã e Lucas Mattos',
+    codeLink: 'https://github.com/vcanaa',
+    demoLink: 'https://play.google.com/store/apps/details?id=com.baldbeangames.pandoodlefull&hl=en'
   }
   // {
   //   name: 'Ricochette',
