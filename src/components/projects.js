@@ -12,8 +12,7 @@ export default props => {
 
   return (
     <section id='projects'>
-      <h3>Projects</h3>
-      <hr />
+      <h1>Projects</h1>
       <div className='row'>
         {cardList}
       </div>
