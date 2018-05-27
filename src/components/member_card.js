@@ -1,6 +1,7 @@
 import React from 'react'
 import { Popup, Grid, Card, Icon, Image } from 'semantic-ui-react'
 
+
 export default props => {
   return (
       <Grid.Column>

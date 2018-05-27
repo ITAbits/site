@@ -25,10 +25,8 @@ export default props => {
     <div>
       <Container card>
         <h1>Members</h1>
-          <Grid>
-            <Grid.Row columns={5}>
+          <Grid doubling columns={6}>
               {members}
-            </Grid.Row>
           </Grid>
       </Container>
     </div>
