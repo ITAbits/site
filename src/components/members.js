@@ -13,6 +13,10 @@ export default props => {
         description={item.description}
         joined={item.joined}
         left={item.left}
+        mail={item.mail}
+        github={item.github}
+        facebook={item.facebook}
+        linkedin={item.linkedin}
       />
     );
   });
@@ -20,7 +24,7 @@ export default props => {
   return (
     <div>
       <Container card>
-        <Header as='h2' style={{color: 'white'}}>Members</Header>
+        <h1>Members</h1>
           <Grid>
             <Grid.Row columns={5}>
               {members}

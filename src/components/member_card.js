@@ -1,33 +1,35 @@
 import React from 'react'
-import { Grid, Card, Icon, Image } from 'semantic-ui-react'
+import { Popup, Grid, Card, Icon, Image } from 'semantic-ui-react'
 
 export default props => {
   return (
-    <Grid.Column>
-      <Card>
-        <Image src={props.img}/>
-        <Card.Content>
-          <Card.Header>
-            {props.name}
-          </Card.Header>
-          <Card.Meta>
-            <span className='date'>
-              {props.joined} - {props.left}
-            </span>
-          </Card.Meta>
-          <Card.Description>
-            {props.description}
-          </Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-          <a>
-            <Icon name='mail'/>
-            <Icon name='facebook square'/>
-            <Icon name='github square'/>
-            <Icon name='linkedin square'/>
-          </a>
-        </Card.Content>
-      </Card>
-    </Grid.Column>
+      <Grid.Column>
+        <div style={{color:'black'}}>
+          <Card >
+            <Image src={props.img}/>
+            <Card.Content>
+              <Card.Header>
+                {props.name}
+              </Card.Header>
+              <Card.Meta>
+                  {props.joined} - {props.left}
+              </Card.Meta>
+              <Card.Description>
+                {props.description}
+              </Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+                <Popup
+                  trigger={<Icon circular name='mail' />}
+                  content={props.mail}
+                  inverted
+                  position='left center'
+                />
+                <a href={props.github}><Icon name='github square'/></a>
+                <a href={props.linkedin}><Icon name='linkedin square'/></a>
+            </Card.Content>
+          </Card>
+        </div>
+      </Grid.Column>
   )
 }

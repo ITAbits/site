@@ -1,12 +1,11 @@
 import React from 'react'
-
-import Card from './card'
+import ProjectCard from './project_card'
 import projectsArray from '../assets/data/projects_data'
 
 export default props => {
   const cardList = projectsArray.map((item, index) => {
     return (
-      <Card
+      <ProjectCard
         title={item.name}
         info={item.info}
         src={item.img}

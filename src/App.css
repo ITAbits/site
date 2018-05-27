@@ -12,7 +12,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+div {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
@@ -353,4 +354,3 @@ form > .row {
         margin-top: 2%;
     }
 }
-
