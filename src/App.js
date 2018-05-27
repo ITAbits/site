@@ -7,12 +7,14 @@ import './App.css';
 
 import LandingPage from './LandingPage'
 import Projects from './components/projects'
+import Members from './components/members'
 
 export default class App extends Component {
   render () {
     return (
       <div>
         <Projects/>
+        <Members/>
       </div>
     )
   }

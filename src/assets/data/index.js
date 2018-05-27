@@ -1,5 +1,5 @@
-import people from './people'
-
-export {
-  people
-}
+// import people from './people'
+//
+// export {
+//   people
+// }
