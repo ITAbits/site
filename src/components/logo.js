@@ -4,7 +4,7 @@ import { Grid } from 'semantic-ui-react'
 
 export default props => {
   return (
-        <svg width="100vw" height="105vh">
+        <svg class="animate-reveal animate-second" width="100vw" height="105vh">
           <defs>
             <symbol id="red">
               <rect width="100" height="100" style={{fill:'rgb(211,47,47)'}}/>
@@ -39,7 +39,7 @@ export default props => {
             </g>
             <g transform="translate(-80, 400)">
               <path id="path">
-              <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" fill="freeze"/>
+              <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="1.2s" fill="freeze"/>
               </path>
               <text font-size="72" font-family="Montserrat" style={{fill:'rgb(255, 255, 255)'}}>
                 <textPath xlinkHref="#path">itabits</textPath>
