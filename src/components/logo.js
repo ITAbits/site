@@ -4,7 +4,7 @@ import { Grid } from 'semantic-ui-react'
 
 export default props => {
   return (
-        <svg width="1000" height="1000">
+        <svg width="100vw" height="105vh">
           <defs>
             <symbol id="red">
               <rect width="100" height="100" style={{fill:'rgb(211,47,47)'}}/>
@@ -31,7 +31,6 @@ export default props => {
                   <use xlinkHref="#yellow" x="-106"/>
                   <use xlinkHref="#blue"/>
                   <use xlinkHref="#yellow" x="106"/>
-
                   <g transform="translate(0, 112)">
                     <use xlinkHref="#yellow"/>
                   </g>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Header, Grid } from 'semantic-ui-react'
+import { Icon, Container, Header, Grid } from 'semantic-ui-react'
 import peopleArray from '../assets/data/people_data'
 import MemberCard from './member_card.js'
 
@@ -24,7 +24,7 @@ export default props => {
   return (
     <div>
       <Container card>
-        <h1>Members</h1>
+        <h1>Members  <a href='/members'><Icon name='arrow right' /></a></h1>
           <Grid doubling columns={6}>
               {members}
           </Grid>
