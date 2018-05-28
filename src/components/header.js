@@ -4,7 +4,7 @@ import { Grid } from 'semantic-ui-react'
 
 export default props => {
   return (
-        <svg class="animate-reveal animate-second" width="100vw" height="105vh">
+        <svg class="animate-reveal animate-second" width="100vw" height="100vh">
           <defs>
             <symbol id="red">
               <rect width="100" height="100" style={{fill:'rgb(211,47,47)'}}/>

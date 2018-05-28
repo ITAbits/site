@@ -15,9 +15,6 @@ export default props => {
               <Card.Meta>
                   {props.joined} - {props.left}
               </Card.Meta>
-              <Card.Description>
-                {props.description}
-              </Card.Description>
             </Card.Content>
             <Card.Content extra>
                 <Popup

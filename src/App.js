@@ -8,16 +8,16 @@ import './App.css';
 import LandingPage from './LandingPage'
 import Projects from './components/projects'
 import Members from './components/members'
-import Pitch from './components/pitch'
+import About from './components/about'
 import Footer from './components/footer'
-import Logo from './components/logo'
+import Header from './components/header'
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <Logo/>
-        <Pitch/>
+        <Header/>
+        <About/>
         <Projects/>
         <Members/>
         <Footer/>
