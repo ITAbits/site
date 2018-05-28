@@ -7,8 +7,6 @@ body {
     background-image: url(./assets/images/projects/background-image.png);
 }
 
-
-
 .animate-reveal {
   text-transform: uppercase;
   opacity: 0;
@@ -106,12 +104,6 @@ body {
             transform: translateY(0);
   }
 }
-
-
-
-
-
-
 
 h1,
 h2,
@@ -283,6 +275,10 @@ hr.sub {
 
 .card .card-title {
     font-weight: bold;
+}
+
+.card-info {
+    color: black;
 }
 
 .card-title.card-open {

@@ -20,8 +20,8 @@ export default props =>{
       <div className="card-reveal">
         <span className="card-title card-open">{props.title}<i className="material-icons right">close</i></span>
         <hr/>
-        <p>{props.info}</p>
-        <p><strong>Made by: </strong> {props.developers}</p>
+        <p className="card-info">{props.info}</p>
+        <p className="card-info"><strong>Made by: </strong> {props.developers}</p>
         <a className="waves-effect waves-light btn" target="_blank" href={props.code}><i className="material-icons right">developer_mode</i> code</a>
         {demoBtn}
       </div>

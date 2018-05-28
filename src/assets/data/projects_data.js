@@ -5,7 +5,7 @@ import ricochetteimg from '../images/projects/ricochette.png'
 
 import balancegif from '../images/projects/balance.gif'
 import overheadgif from '../images/projects/overhead.gif'
-import pandooldegif from '../images/projects/pandoodle.gif'
+import pandoodlegif from '../images/projects/pandoodle.gif'
 
 export default [
   {
@@ -32,7 +32,7 @@ export default [
     name: 'Pandoodle',
     info: 'Drawing puzzle! Get the right colors and the least amount of ink!',
     img: pandoodleimg,
-    gif: pandooldegif,
+    gif: pandoodlegif,
     alt: 'Pandoodle',
     developers: 'Vinicius Canaã e Lucas Mattos',
     codeLink: 'https://github.com/vcanaa',
