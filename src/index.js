@@ -6,5 +6,6 @@ import registerServiceWorker from './registerServiceWorker'
 
 import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()
+ReactDOM.render(<App />, document.getElementById('root'));
+
+//registerServiceWorker() <<<<<< PRA QUE ISSO MELDELS?

@@ -1,53 +1,27 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react';
 
-import { Segment, Container, Header, Grid } from 'semantic-ui-react'
+// Landing Page sections
+import Header from './components/header';
+import About from './components/about';
+import Footer from './components/footer';
 
-import { people } from './assets/data'
+// External pages sections
+import Projects from './components/projects';
+import Members from './components/members';
 
-function Person (props) {
-  return (
-    <Segment>
-      <Grid columns={2}>
-        <Grid.Column>
-          {props.name}
-        </Grid.Column>
-        <Grid.Column>
-          {props.description}
-        </Grid.Column>
-      </Grid>
-    </Segment>
-  )
+class LandingPage extends Component {
+    render(){
+
+      return (
+          <section>
+              <Header/>
+              <About/>
+              <Projects/>
+              <Members/>
+              <Footer/>
+          </section>
+      );
+    };
 }
 
-export default class LandingPage extends Component {
-  render () {
-    const headerMargin = Math.random() * 200
-    const peopleDisplay = people.map((person, i) => (
-      <Person key={i} name={person.name} description={person.description} />
-    ))
-    return (
-      <div>
-        <Segment
-          inverted
-          textAlign='center'
-          style={
-            {
-              backgroundColor: '#ff00ff'
-            }}
-          vertical>
-          <Container text>
-            <Header
-              as='h1'
-              content='ITAbits'
-              inverted
-              style={{
-                margin: headerMargin
-              }}
-            />
-          </Container>
-        </Segment>
-        {peopleDisplay}
-      </div>
-    )
-  }
-}
+export default LandingPage;
