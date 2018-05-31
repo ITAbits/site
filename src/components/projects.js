@@ -3,8 +3,6 @@ import ProjectCard from './project_card'
 import projectsArray from '../assets/data/projects_data'
 import { Icon, Container, Header, Grid } from 'semantic-ui-react'
 
-
-
 export default props => {
   const cardList = projectsArray.map((item, index) => {
     return (
@@ -23,11 +21,14 @@ export default props => {
   })
 
   return (
-    <section id='projects'>
-      <h1>Projects<a href='/projects'><Icon name='arrow right' /></a></h1>
-      <div className='row'>
-        {cardList}
-      </div>
-    </section>
+    <div id='projects-container'>
+      <section id='project-section'>
+        <h1>Projects<a href='/projects'><Icon name='arrow right' /></a></h1>
+        <h5>"Passion is our mark. ITA_Bits was created to centralize our dreams in an environment where people can learn and grow together!"</h5>
+          <div className='row'>
+          {cardList}
+        </div>
+      </section>
+    </div>
   )
 }
