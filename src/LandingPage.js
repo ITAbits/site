@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 // Landing Page sections
 import Header from './components/header'
+import About from './components/about'
 import ProjectsSector from './components/projects_sector'
 import Footer from './components/footer'
 import MembersSector from './components/members_sector'
@@ -11,13 +12,13 @@ import MembersSector from './components/members_sector'
 class LandingPage extends Component {
   render () {
     return (
-      <section>
+      <div>
         <Header />
-        {/*<About />*/}
+        <About />
         <ProjectsSector />
         <MembersSector />
         <Footer />
-      </section>
+      </div>
     )
   };
 }

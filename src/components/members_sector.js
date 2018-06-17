@@ -22,7 +22,7 @@ export default props => {
   });
 
   return (
-    <div>
+    <div id='members-container'>
       <Container card>
         <h1>Our Team</h1>
         <Grid doubling columns={6}>

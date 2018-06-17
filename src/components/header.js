@@ -4,6 +4,7 @@ import { Grid } from 'semantic-ui-react'
 
 export default props => {
   return (
+    <div id='header-container'>
         <svg class="animate-reveal animate-second" width="100vw" height="100vh">
           <defs>
             <symbol id="red">
@@ -47,5 +48,6 @@ export default props => {
             </g>
           </g>
         </svg>
+    </div>
   )
 }
