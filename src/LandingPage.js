@@ -1,27 +1,25 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 
 // Landing Page sections
-import Header from './components/header';
-import About from './components/about';
-import Footer from './components/footer';
+import Header from './components/header'
+import ProjectsSector from './components/projects_sector'
+import Footer from './components/footer'
+import MembersSector from './components/members_sector'
 
 // External pages sections
-import Projects from './components/projects';
-import Members from './components/members';
 
 class LandingPage extends Component {
-    render(){
-
-      return (
-          <section>
-              <Header/>
-              <About/>
-              <Projects/>
-              <Members/>
-              <Footer/>
-          </section>
-      );
-    };
+  render () {
+    return (
+      <section>
+        <Header />
+        {/*<About />*/}
+        <ProjectsSector />
+        <MembersSector />
+        <Footer />
+      </section>
+    )
+  };
 }
 
-export default LandingPage;
+export default LandingPage

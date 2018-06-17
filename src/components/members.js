@@ -24,7 +24,7 @@ export default props => {
   return (
     <div>
       <Container card>
-        <h1>Members  <a href='/members'><Icon name='arrow right' /></a></h1>
+        <h1>Our Team</h1>
           <Grid doubling columns={6}>
               {members}
           </Grid>

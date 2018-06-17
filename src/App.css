@@ -139,12 +139,25 @@ section {
 }
 
 section#project-section {
-    background: #4a4a73;
+    /* The image used */
+    background-image: url(./assets/images/landing-page/background-image-projects.png);
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #projects-container {
     margin: 0%;
-    background: #4a4a73;
+}
+
+#subtitle-text {
+    color: #039be5;
 }
 
 section#contact {
@@ -185,6 +198,60 @@ nav {
     height: 100vh;
     outline-color: white;
 
+}
+
+.goto-button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #039be5;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    vertical-align:middle;
+}
+
+.goto-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.goto-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.goto-button:hover span {
+    padding-right: 25px;
+}
+
+.goto-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.img-word-container {
+    white-space: nowrap;
+}
+.img-container {
+    display:inline;
+    background-image: url("assets/images/landing-page/balltris.png");
+}
+
+.word-container {
+    display:inline;
+    white-space:nowrap;
 }
 
 .side-nav li > a:hover {
