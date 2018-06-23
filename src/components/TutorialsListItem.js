@@ -1,36 +1,37 @@
 import React, { Component } from 'react';
 import { List } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 class TutorialsListItem extends Component {
     constructor(props) {
         super(props);
 
+        this.title = props.title;
+        this.content_url = props.url;
+        this.chapters = props.chapters;
+
         this.state = {
-            title: props.title,
-            content_url: props.url,
-            chapters: props.chapters,
             dropped: false
         };
     }
 
     render() {
         // Creates array of react components from chapter data array
-        const chapterItems = this.state.chapters.map((chapter, index) =>{
+        const chapterItems = this.chapters.map((chapter, index) =>{
 
             return(
-                <List.Item as='a'
-                           index={index}
-                           content={chapter.title}
-                           href={this.state.content_url+chapter.content_url}
-                />
+                <Link to={this.content_url+chapter.content_url}>
+                  <List.Item index={index}
+                             content={chapter.title}/>
+                </Link>
             );
         });
 
 
         return(
                 <List.Item>
-                    <a href={this.state.content_url}> {this.state.title} </a>
-                    <List bulleted vertical link>
+                    <Link to={this.content_url}> {this.title} </Link>
+                    <List bulleted vertical>
                         {chapterItems}
                     </List>
                 </List.Item>

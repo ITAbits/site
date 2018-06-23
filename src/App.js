@@ -14,12 +14,12 @@ import TutorialsPage from './TutorialsPage';
 export default class App extends Component {
   render () {
     return (
-    <Router>
+    <Router forceRefresh={false}>
       <div>
         <Route exact path="/" component={LandingPage} />
         <Route path="/projects" component={ProjectsPage} />
         <Route path="/members" component={MembersPage}/>
-        <Route path="/tutorials" component={TutorialsPage}/>
+        <Route path="/tutorials" component={TutorialsPage} />
       </div>
     </Router>
     );
