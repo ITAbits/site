@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Header, Container, List } from 'semantic-ui-react'
+import { Grid, Container, List } from 'semantic-ui-react'
 
 
 export default props => {

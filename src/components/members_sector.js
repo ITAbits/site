@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Container, Header, Grid } from 'semantic-ui-react'
+import { Container, Grid } from 'semantic-ui-react'
 import peopleArray from '../assets/data/people_data'
 import MemberCard from './member_card.js'
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Sidebar, Button, Segment} from "semantic-ui-react";
-import {Route} from "react-router-dom"
+import { Route, Link} from "react-router-dom"
 
 import './style/TutorialsPage.css';
 
@@ -20,24 +20,22 @@ class TutorialsPage extends Component {
         this.state = {
             visible: true
         };
-
-        // Toggle sidebar visibility
-        this.toggleVisible = () => {
-            this.setState({
-                visible: !this.state.visible
-            })
-        };
     }
 
     render() {
 
         return(
-            <div className="tutorialsPage">
-                <Sidebar.Pushable>
+            <div>
+                <Sidebar.Pushable className="tutorialsPage">
 
                     <Sidebar as={Segment} animation='push' visible={this.state.visible}
-                             width='medium' vertical inverted>
-                      <TutorialsList parentPath={this.path} list={this.tutorials}/>
+                             width='very wide' vertical inverted>
+                      <div className="tutorialsSidebar">
+                        <header>
+                          <Link to={this.path} > Tutoriais </Link>
+                        </header>
+                        <TutorialsList  parentPath={this.path} list={this.tutorials}/>
+                      </div>
                     </Sidebar>
 
                       <Sidebar.Pusher>
@@ -46,9 +44,6 @@ class TutorialsPage extends Component {
                       </Sidebar.Pusher>
 
                 </Sidebar.Pushable>
-
-              <Button onClick={this.toggleVisible} > Toggle Sidemenu! </Button>
-
             </div>
         );
     }

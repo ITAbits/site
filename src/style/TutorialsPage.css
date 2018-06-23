@@ -1,6 +1,67 @@
 .tutorialsPage {
     /*height: 100%;*/
-    height: 1000px;
+    min-height: 50em;
+}
+
+.tutorialSidebar {
+
+}
+
+.tutorialsSidebar header a {
+    color: azure;
+    font-size: 32pt;
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+
+    height: fit-content;
+}
+
+.tutorialsSidebar header a :hover {
+    color: inherit;
+    font-size: 32pt;
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+
+    height: fit-content;
+}
+
+.tutorialsSidebarItem {
+    text-align: left;
+    margin-left: 15%;
+}
+
+.tutorialsSidebar ::before {
+
+}
+
+.tutorialsSidebarItem .tutorialTitle {
+    display: block;
+
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+
+    font-size: 16pt;
+}
+
+.tutorialChapterItem {
+    display: block;
+
+    margin-left: 10%;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+
+    font-size: 12pt;
+
+    text-align: left;
+}
+
+.tutorialChapterItem:hover {
+    font-style: oblique;
+    color: azure;
+}
+
+.tutorialChapterItem :hover {
+    background-color: red;
 }
 
 .tutorialsContent h3 {

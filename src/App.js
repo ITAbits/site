@@ -14,7 +14,7 @@ import TutorialsPage from './TutorialsPage';
 export default class App extends Component {
   render () {
     return (
-    <Router forceRefresh={false}>
+    <Router>
       <div>
         <Route exact path="/" component={LandingPage} />
         <Route path="/projects" component={ProjectsPage} />

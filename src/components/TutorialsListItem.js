@@ -21,7 +21,8 @@ class TutorialsListItem extends Component {
 
             return(
                 <Link to={this.content_url+chapter.content_url}>
-                  <List.Item index={index}
+                  <List.Item className="tutorialChapterItem"
+                             index={index}
                              content={chapter.title}/>
                 </Link>
             );
@@ -29,8 +30,8 @@ class TutorialsListItem extends Component {
 
 
         return(
-                <List.Item>
-                    <Link to={this.content_url}> {this.title} </Link>
+                <List.Item className="tutorialsSidebarItem">
+                    <Link className="tutorialTitle" to={this.content_url}> {this.title} </Link>
                     <List bulleted vertical>
                         {chapterItems}
                     </List>

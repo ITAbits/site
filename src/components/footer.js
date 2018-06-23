@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Grid, Header, Container, List } from 'semantic-ui-react'
+import { Icon, Grid, Container } from 'semantic-ui-react'
 
 
 export default props => {
