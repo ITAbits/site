@@ -9,16 +9,17 @@ import './App.css';
 import LandingPage from './LandingPage';
 import ProjectsPage from './ProjectsPage';
 import MembersPage from './MembersPage';
-
+import TutorialsPage from './TutorialsPage';
 
 export default class App extends Component {
   render () {
     return (
     <Router>
       <div>
-        <Route exact={true} path="/" component={LandingPage} />
+        <Route exact path="/" component={LandingPage} />
         <Route path="/projects" component={ProjectsPage} />
         <Route path="/members" component={MembersPage}/>
+        <Route path="/tutorials" component={TutorialsPage}/>
       </div>
     </Router>
     );
