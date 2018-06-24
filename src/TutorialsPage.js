@@ -20,12 +20,19 @@ class TutorialsPage extends Component {
         this.state = {
             visible: true
         };
+
+        this.toggleVisible = () => {
+          this.setState({
+            visible: !this.state.visible
+          })
+        }
     }
 
     render() {
 
         return(
             <div>
+              <Button onClick={this.toggleVisible} > I exist! </Button>
                 <Sidebar.Pushable className="tutorialsPage">
 
                     <Sidebar as={Segment} animation='push' visible={this.state.visible}
@@ -37,7 +44,8 @@ class TutorialsPage extends Component {
 
                       <Sidebar.Pusher>
                         <Route exact path={`${this.path}`} component={TutorialsHome}/>
-                        <Route path={`${this.path}/:tutorial`} component={TutorialsContent} />
+                        <Route exact path={`${this.path}/:tutorial`} component={TutorialsContent} />
+                        <Route path={`${this.path}/:tutorial/:chapter`} component={TutorialsContent} />
                       </Sidebar.Pusher>
 
                 </Sidebar.Pushable>
