@@ -1,5 +1,5 @@
 {
-  "name": "site",
+  "name": "itabits",
   "version": "0.1.0",
   "homepage": "https://www.itabits.com.br",
   "private": true,
@@ -44,5 +44,9 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build && node setcname.js",
     "deploy": "gh-pages -d build"
+  },
+  "engines": {
+    "node": "8.10.0",
+    "npm": "5.6.0"
   }
 }
