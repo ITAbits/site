@@ -5,7 +5,6 @@ import Header from './components/header'
 import About from './components/about'
 import ProjectsSector from './components/ProjectsSector'
 import Footer from './components/footer'
-import MembersSector from './components/MembersSector'
 import InfoSector from './components/InfoSector'
 import TutorialsSector from './components/TutorialsSector'
 
