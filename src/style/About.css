@@ -1,0 +1,15 @@
+#about-container {
+    padding: 6rem 0;
+    background: url("../assets/images/landing-page/dark-blue-degrade.jpg");
+}
+
+#about-container h3 {
+    color: white;
+}
+
+#about-container p {
+    text-align: justify;
+    font-weight: normal;
+    text-transform: none;
+    color: white;
+}
