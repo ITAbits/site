@@ -570,3 +570,30 @@ form > .row {
         margin-top: 2%;
     }
 }
+
+/*header text effect*/
+.typewriter h1 {
+  overflow: hidden;
+  color: white;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid transparent;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation: typing 5s steps(60), blink-caret 3s;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  50% { border-color: orange; }
+}
