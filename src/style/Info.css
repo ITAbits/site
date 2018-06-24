@@ -1,0 +1,25 @@
+#info-container {
+    margin: 0%;
+}
+
+#info-section {
+    padding: 4rem 3rem;
+}
+
+#info-container p {
+    text-align: justify;
+    font-weight: normal;
+    text-transform: none;
+}
+
+#info-container i {
+    display: inline-block;
+    font-size: 600%;
+    padding-left: 40%;
+    color: black;
+    /*padding-right: 5%;*/
+}
+
+#info-container h5 {
+    text-weight: normal;
+}
