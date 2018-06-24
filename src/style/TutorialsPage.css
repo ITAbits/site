@@ -56,6 +56,53 @@
     color: #4183c4;
 }
 
-.tutorialsContent h3 {
-    color: black
+.tutorialContent {
+    min-height: 50em;
+}
+
+.tutorialContentWrapper {
+    width: 90%;
+    background: snow;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 0.25em;
+}
+
+div.tutorialContent {
+    /*position: fixed;*/
+    top: 10%;
+    right: 0;
+    left: 10%;
+    bottom: 0;
+    overflow: auto;
+    padding: 10%;
+
+    color: #444;
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 1.25em;
+
+    line-height: 1.5em;
+    text-align: justify;
+    text-transform: none;
+}
+
+div.tutorialContent h2 {
+    font-weight: bold;
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+
+    text-transform: none;
+}
+
+div.tutorialContent li{
+    list-style-type: disc;
+    font-size: inherit;
+}
+
+div.tutorialContent p {
+    font-size: 1.25em;
+}
+
+div.tutorialContent a {
+    font-size: inherit;
 }
