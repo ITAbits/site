@@ -1,14 +1,9 @@
 section#project-section {
-    /* The image used */
-    background-image: url(./../assets/images/landing-page/background-image-projects.png);
-
     /* Set a specific height */
     height: 100%;
 
     /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(./../assets/images/landing-page/background-image-projects.png) no-repeat fixed center;
     background-size: cover;
 }
 
@@ -16,10 +11,16 @@ section#project-section h1 {
     color: white;
 }
 
+section#project-section h5 {
+    padding-left: 10%;
+    padding-right: 10%;
+    text-transform: none;
+}
+
 #projects-container {
     margin: 0%;
 }
 
 #subtitle-text {
-    color: #039be5;
+    color: white;
 }
