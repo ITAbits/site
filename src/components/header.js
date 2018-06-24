@@ -20,7 +20,7 @@ export default props => {
             </symbol>
           </defs>
           <g>
-            <g style={{transform: 'translate(50%, 5%)'}}>
+            <g style={{transform: 'translate(50%, 25%)'}}>
               <g transform="translate(-27.5,0)">
                 <use xlinkHref="#red"/>
                 <g transform="translate(0,35)">
