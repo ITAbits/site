@@ -1,1 +1,1 @@
-web: gunicorn app:app --log-file=-
+web: gunicorn npm start && app:app --log-file=-
