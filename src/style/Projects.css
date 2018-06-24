@@ -1,0 +1,25 @@
+section#project-section {
+    /* The image used */
+    background-image: url(./../assets/images/landing-page/background-image-projects.png);
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section#project-section h1 {
+    color: white;
+}
+
+#projects-container {
+    margin: 0%;
+}
+
+#subtitle-text {
+    color: #039be5;
+}
