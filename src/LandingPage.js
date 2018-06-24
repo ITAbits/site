@@ -8,6 +8,7 @@ import Footer from './components/footer'
 import MembersSector from './components/MembersSector'
 import InfoSector from './components/InfoSector'
 import TutorialsSector from './components/TutorialsSector'
+import Navbar from './components/Navbar'
 
 // External pages sections
 
@@ -15,6 +16,7 @@ class LandingPage extends Component {
   render () {
     return (
       <div>
+        <Navbar />
         <Header />
         <About />
         <InfoSector />
