@@ -3,10 +3,11 @@ import React, {Component} from 'react'
 // Landing Page sections
 import Header from './components/header'
 import About from './components/about'
-import ProjectsSector from './components/projects_sector'
+import ProjectsSector from './components/ProjectsSector'
 import Footer from './components/footer'
-import MembersSector from './components/members_sector'
+import MembersSector from './components/MembersSector'
 import InfoSector from './components/InfoSector'
+import TutorialsSector from './components/TutorialsSector'
 
 // External pages sections
 
@@ -18,7 +19,7 @@ class LandingPage extends Component {
         <About />
         <InfoSector />
         <ProjectsSector />
-        <MembersSector />
+        <TutorialsSector />
         <Footer />
       </div>
     )

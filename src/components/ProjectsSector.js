@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from 'semantic-ui-react'
-import '../style/Projects.css'
+import '../style/ProjectsSector.css'
 
 export default props => {
   return <div id='projects-container'>

@@ -3,7 +3,7 @@
 }
 
 #about-section {
-    padding: 4rem 3rem;
+    padding: 4rem 6rem;
     background: url("../assets/images/landing-page/dark-blue-degrade.jpg");
 }
 
@@ -20,4 +20,5 @@
     font-weight: normal;
     text-transform: none;
     color: white;
+    font-size: 120%;
 }

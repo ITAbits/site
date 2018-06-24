@@ -1,0 +1,36 @@
+#tutorials-container {
+    margin: 0%;
+}
+
+#tutorials-section {
+    padding: 4rem 10rem;
+    background: url("../assets/images/landing-page/dark-blue-degrade.jpg");
+}
+
+#tutorials-section span {
+    font-size: 80%;
+}
+
+#tutorials-section img {
+    height: 40%;
+    width: 40%;
+    margin-left: 25%;
+    margin-right: 50%;
+}
+
+#tutorials-section h5 {
+    color: white;
+    vertical-align: middle;
+}
+
+#tutorials-container h3 {
+    color: white;
+}
+
+#tutorials-container p {
+    text-align: justify;
+    font-weight: normal;
+    text-transform: none;
+    color: white;
+    font-size: 130%;
+}

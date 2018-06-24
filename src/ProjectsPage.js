@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectCard from './components/project_card'
+import ProjectCard from './components/ProjectCard'
 import projectsArray from './assets/data/projects_data'
 import { Icon, Container, Header, Grid } from 'semantic-ui-react'
 
