@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { List } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import TutorialsListItem from './TutorialsListItem';
 
@@ -22,9 +23,14 @@ class TutorialsList extends Component {
         });
 
         return(
-            <List bulleted vertical divided inverted compact link>
-                {tutorialItems}
-            </List>
+            <div>
+              <header>
+                <Link to={this.parentPath}> Tutoriais </Link>
+              </header>
+              <List bulleted vertical inverted>
+                  {tutorialItems}
+              </List>
+            </div>
         );
     };
 }

@@ -21,7 +21,7 @@ class TutorialsListItem extends Component {
 
             return(
                 <Link to={this.content_url+chapter.content_url}>
-                  <List.Item className="tutorialChapterItem"
+                  <List.Item id="tutorialChapterItem"
                              index={index}
                              content={chapter.title}/>
                 </Link>

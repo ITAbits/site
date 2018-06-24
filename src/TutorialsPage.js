@@ -7,7 +7,7 @@ import './style/TutorialsPage.css';
 import TutorialsList from './components/TutorialsList';
 import TutorialsContent from './components/TutorialsContent';
 
-import TUTORIAL_DATA from "./assets/data/tutorials.json";
+import TUTORIAL_DATA from "./assets/data/tutoriais/tutorials.json";
 
 class TutorialsPage extends Component {
     constructor(props) {
@@ -31,9 +31,6 @@ class TutorialsPage extends Component {
                     <Sidebar as={Segment} animation='push' visible={this.state.visible}
                              width='very wide' vertical inverted>
                       <div className="tutorialsSidebar">
-                        <header>
-                          <Link to={this.path} > Tutoriais </Link>
-                        </header>
                         <TutorialsList  parentPath={this.path} list={this.tutorials}/>
                       </div>
                     </Sidebar>
