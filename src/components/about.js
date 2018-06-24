@@ -22,9 +22,6 @@ export default props => {
           essa mesma competição em 2007 estava auxiliando o grupo de segundanistas. O projeto ganhou a Feira de Ciências do ITA. Em 2009, esse grupo de amigos levou o projeto
           para frente: assim surgia a ITA Bits.
         </p>
-        <section id='about-content'>
-          <img src='../assets/images/landing-page/about/baloon.png' />
-        </section>
       </section>
     </div>
   )

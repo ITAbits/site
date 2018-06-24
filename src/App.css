@@ -142,6 +142,12 @@ div {
     color: black;
 }
 
+.project-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /*
  * Using ONLY for site text and citations
  */
@@ -164,28 +170,6 @@ section {
 
 #members-container {
 
-}
-
-section#project-section {
-    /* The image used */
-    background-image: url(./assets/images/landing-page/background-image-projects.png);
-
-    /* Set a specific height */
-    height: 100%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#projects-container {
-    margin: 0%;
-}
-
-#subtitle-text {
-    color: #039be5;
 }
 
 section#contact {
@@ -372,11 +356,6 @@ hr.sub {
     transition-duration: 1s;
     transition-timing-function: ease;
     /* color: #ffffff; */
-}
-
-.project-image {
-    max-width: 100%;
-    height: auto;
 }
 
 .row .col.card {
