@@ -31,9 +31,6 @@ class TutorialsPage extends Component {
                     <Sidebar as={Segment} animation='push' visible={this.state.visible}
                              width='very wide' vertical inverted>
                       <div className="tutorialsSidebar">
-                        <header>
-                          <Link to={this.path} > Tutoriais </Link>
-                        </header>
                         <TutorialsList  parentPath={this.path} list={this.tutorials}/>
                       </div>
                     </Sidebar>

@@ -7,6 +7,10 @@
 
 }
 
+.tutorialsSidebar :hover {
+    color: #4183c4;
+}
+
 .tutorialsSidebar header a {
     color: azure;
     font-size: 32pt;
@@ -16,14 +20,6 @@
     height: fit-content;
 }
 
-.tutorialsSidebar header a :hover {
-    color: inherit;
-    font-size: 32pt;
-    margin-top: 0.5em;
-    margin-bottom: 0.75em;
-
-    height: fit-content;
-}
 
 .tutorialsSidebarItem {
     text-align: left;
@@ -31,7 +27,7 @@
 }
 
 .tutorialsSidebar ::before {
-
+    font-size: 2em;
 }
 
 .tutorialsSidebarItem .tutorialTitle {
@@ -43,25 +39,21 @@
     font-size: 16pt;
 }
 
-.tutorialChapterItem {
+#tutorialChapterItem {
     display: block;
 
     margin-left: 10%;
     margin-top: 0.75em;
     margin-bottom: 0.75em;
 
+    color: azure;
     font-size: 12pt;
 
     text-align: left;
 }
 
-.tutorialChapterItem:hover {
-    font-style: oblique;
-    color: azure;
-}
-
-.tutorialChapterItem :hover {
-    background-color: red;
+#tutorialChapterItem:hover {
+    color: #4183c4;
 }
 
 .tutorialsContent h3 {
