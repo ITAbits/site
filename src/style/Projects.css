@@ -17,6 +17,10 @@ section#project-section h5 {
     text-transform: none;
 }
 
+section#project-section span {
+    font-size: 100%;
+}
+
 #projects-container {
     margin: 0%;
 }

@@ -7,6 +7,10 @@
     background: url("../assets/images/landing-page/dark-blue-degrade.jpg");
 }
 
+#about-section span {
+    font-size: 55%;
+}
+
 #about-container h3 {
     color: white;
 }
