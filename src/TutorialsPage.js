@@ -7,7 +7,7 @@ import './style/TutorialsPage.css';
 import TutorialsList from './components/TutorialsList';
 import TutorialsContent from './components/TutorialsContent';
 
-import TUTORIAL_DATA from "./assets/data/tutorials.json";
+import TUTORIAL_DATA from "./assets/data/tutoriais/tutorials.json";
 
 class TutorialsPage extends Component {
     constructor(props) {
