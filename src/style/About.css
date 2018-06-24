@@ -1,5 +1,9 @@
 #about-container {
-    padding: 6rem 0;
+    margin: 0%;
+}
+
+#about-section {
+    padding: 6rem 3rem;
     background: url("../assets/images/landing-page/dark-blue-degrade.jpg");
 }
 
