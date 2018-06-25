@@ -14,25 +14,30 @@ export default class Navbar extends Component {
 
     return (
       <div>
-        <Menu color='blue' fixed="top" inverted>
-          <Menu.Item name='home' as={NavLink} to='/' active={activeItem === 'home'} onClick={this.handleItemClick} >
+        <Menu color='blue' fixed="top" >
+          <Menu.Item
+            as={NavLink} to='/'
+            name='home'
+            active={activeItem === 'home'}
+            onClick={this.handleItemClick}
+          >
             <img src={logo} />
           </Menu.Item>
           <Menu.Item
             as={NavLink} to='/projects'
-            name='Projetos'
+            name='PROJETOS'
             active={activeItem === 'Projetos'}
             onClick={this.handleItemClick}
           />
           <Menu.Item
             as={NavLink} to='/tutorials'
-            name='Tutoriais'
+            name='TUTORIAIS'
             active={activeItem === 'Tutoriais'}
             onClick={this.handleItemClick}
           />
           <Menu.Item
             as={NavLink} to='/members'
-            name='Membros'
+            name='MEMBROS'
             active={activeItem === 'Membros'}
             onClick={this.handleItemClick}
           />
