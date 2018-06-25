@@ -1,0 +1,15 @@
+section#projects {
+    background: url("../assets/images/projects/background-projects.jpg");
+}
+
+section#projects h1{
+    color: white;
+}
+
+.card {
+    margin-right: 12em;
+}
+
+.row {
+    margin-left: 12em;
+}

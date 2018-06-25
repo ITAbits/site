@@ -3,6 +3,8 @@ import ProjectCard from './components/ProjectCard'
 import projectsArray from './assets/data/projects_data'
 import { Icon, Container, Header, Grid } from 'semantic-ui-react'
 
+import './style/ProjectsPage.css'
+
 export default props => {
   const cardList = projectsArray.map((item, index) => {
     return (
