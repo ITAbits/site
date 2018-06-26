@@ -31,9 +31,9 @@ export default props => {
                 </Grid>
             </Container>
             <br></br>
-            <p>Você já foi um membro da ITA Bits? Teremos orgulho de registrar você nessa página de membros!<br></br></p>
+            <p>Você já foi um membro da ITA Bits? Teremos orgulho de registrá-lo você nessa página de membros!<br></br></p>
 
-              <Modal trigger={<Button>Show Modal</Button>} closeIcon>
+              <Modal trigger={<Button>Clique aqui</Button>} closeIcon>
                 <Header icon='archive' content='Archive Old Messages' />
                 <Modal.Content>
                   <p>
