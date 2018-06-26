@@ -13,10 +13,8 @@ export default props => {
                 {props.name}
               </Card.Header>
               <Card.Meta>
-                  {props.joined} - {props.left}
+                {props.joined} - {props.left}
               </Card.Meta>
-            </Card.Content>
-            <Card.Content extra>
                 <Popup
                   trigger={<Icon circular name='mail' />}
                   content={props.mail}
