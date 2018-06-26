@@ -12,8 +12,11 @@ db = SQLAlchemy(app)
 
 @app.route('/getmembers', methods=["GET"])
 def getmembers():
-    members = [member.as_dict() for member in Member.query.all()]
-    return jsonify(members=members)
+    try:
+        members = [member.as_dict() for member in Member.query.all()]
+        return jsonify(members=members)
+    except Exception as e:
+        print(e)
 
 @app.route('/addmember', methods=["POST"])
 def addmember():
