@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Sidebar, Button, Segment} from "semantic-ui-react";
+import {Sidebar, Button, Segment, Sticky, Menu, List} from "semantic-ui-react";
 import { Route, Link} from "react-router-dom"
 
 import './style/TutorialsPage.css';
@@ -31,23 +31,20 @@ class TutorialsPage extends Component {
     render() {
 
         return(
-            <div>
+            <div className="tutorialsPage">
               <Button onClick={this.toggleVisible} > I exist! </Button>
-                <Sidebar.Pushable className="tutorialsPage">
+                <Sidebar.Pushable >
 
-                    <Sidebar as={Segment} animation='push' visible={this.state.visible}
-                             width='very wide' vertical inverted>
-                      <div className="tutorialsSidebar">
-                        <TutorialsList  parentPath={this.path} list={this.tutorials}/>
-                      </div>
-                    </Sidebar>
+                  <Sidebar id="tutorialsSidebar" as={Menu} animation="push" visible={this.state.visible}
+                             direction="left" vertical inverted>
+                    <TutorialsList parentPath={this.path} list={this.tutorials}/>
+                  </Sidebar>
 
-                      <Sidebar.Pusher>
-                        <Route exact path={`${this.path}`} component={TutorialsHome}/>
-                        <Route exact path={`${this.path}/:tutorial`} component={TutorialsContent} />
-                        <Route path={`${this.path}/:tutorial/:chapter`} component={TutorialsContent} />
-                      </Sidebar.Pusher>
-
+                    <Sidebar.Pusher>
+                      <Route exact path={`${this.path}`} component={TutorialsHome}/>
+                      <Route exact path={`${this.path}/:tutorial`} component={TutorialsContent} />
+                      <Route path={`${this.path}/:tutorial/:chapter`} component={TutorialsContent} />
+                    </Sidebar.Pusher>
                 </Sidebar.Pushable>
             </div>
         );
