@@ -1,5 +1,7 @@
-from flask import Flask
+from flask import Flask, jsonify, request, render_template
 from flask_sqlalchemy import SQLAlchemy
+import boto3
+import uuid
 import os
 
 
@@ -8,14 +10,20 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI'
 db = SQLAlchemy(app)
 
 
+@app.route('/getmembers', methods=["GET"])
+def getmembers():
+    members = [member.as_dict() for member in Member.query.all()]
+    return jsonify(members=members)
+
 @app.route('/addmember', methods=["POST"])
 def addmember():
     try:
-        firstname = request.json['firstname']
-        secondname = request.json['secondname']
-        callby = request.json['callby']
-        to = request.json['to']
-        imagelink = request.json['imagelink']
+        firstname = request.form['firstname']
+        secondname = request.form['secondname']
+        callby = request.form['callby']
+        since = request.form['since']
+        to = request.form['to']
+        imagelink = request.form['imagelink']
 
         member = Member(firstname, secondname, callby, since, to, imagelink)
 
@@ -26,6 +34,9 @@ def addmember():
     except:
         return jsonify(memberid=None)
 
+@app.route('/',methods=["GET"])
+def index():
+    return render_template("index.html")
 
 def saveImage(file):
     extension = os.path.splitext(file.filename)[1]
@@ -59,6 +70,9 @@ class Member(db.Model):
         self.to = to
         self.imagelink = imagelink
 
+    def as_dict(self):
+        dicionario = {c.name: getattr(self, c.name) for c in self.__table__.columns}
+        return dicionario
 
 if __name__ == '__main__':
     app.run()
