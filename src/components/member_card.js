@@ -7,22 +7,16 @@ export default props => {
       <Grid.Column>
         <div style={{color:'black'}}>
           <Card >
-            <Image src={props.img}/>
+            <Image src={props.imagelink}/>
             <Card.Content>
               <Card.Header>
-                {props.name}
+                {props.callby}
               </Card.Header>
               <Card.Meta>
-                {props.joined} - {props.left}
+                {props.since} - {props.to}
               </Card.Meta>
-                <Popup
-                  trigger={<Icon circular name='mail' />}
-                  content={props.mail}
-                  inverted
-                  position='left center'
-                />
-                <a href={props.github}><Icon name='github square'/></a>
-                <a href={props.linkedin}><Icon name='linkedin square'/></a>
+                <a><Icon name='github square'/></a>
+                <a><Icon name='linkedin square'/></a>
             </Card.Content>
           </Card>
         </div>

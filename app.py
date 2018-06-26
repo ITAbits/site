@@ -15,8 +15,9 @@ def getmembers():
     try:
         members = [member.as_dict() for member in Member.query.all()]
         return jsonify(members=members)
-    except Exception as e:
-        print(e)
+    except:
+        return jsonify(members=None)
+
 
 @app.route('/addmember', methods=["POST"])
 def addmember():
@@ -34,12 +35,9 @@ def addmember():
         db.session.commit()
 
         return jsonify(memberid=member.id)
-    except:
+    except Exception as e:
         return jsonify(memberid=None)
 
-@app.route('/',methods=["GET"])
-def index():
-    return render_template("index.html")
 
 def saveImage(file):
     extension = os.path.splitext(file.filename)[1]
@@ -55,6 +53,9 @@ def saveImage(file):
 
     return path
 
+@app.route('/', methods=["GET"])
+def index():
+    return render_template('index.html')
 
 class Member(db.Model):
     id = db.Column(db.Integer, primary_key=True)
