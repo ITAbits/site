@@ -15,7 +15,7 @@ export default class Navbar extends Component {
 
     return (
       <div id="navBar">
-        <Menu color='blue' fixed="top" inverted>
+        <Menu id="navBarMenu" color='blue' fixed="top" inverted>
           <Menu.Item
             as={NavLink} to='/'
             name='home'

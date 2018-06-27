@@ -5,9 +5,17 @@ import  ReactMarkdown from 'react-markdown';
 import CodeBlockRenderer from "./CodeBlockRenderer";
 import ImageBlockRenderer from "./ImageBlockRenderer";
 
-import c from "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Principais-Diferencas.md";
+import discord from "../assets/data/tutoriais/discord/readme.md";
+import cCsharp from "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/README.md";
+import helloW from "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Primeiro-Projeto-(Windows).md";
+import princDif from "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Principais-Diferencas.md";
 
 import TUTORIAL_DATA from "../assets/data/tutoriais/tutorials.json";
+
+const discordPath = "../assets/data/tutoriais/discord/readme.md";
+const cCsharpPath = "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/README.md";
+const helloWPath = "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Primeiro-Projeto-(Windows).md";
+const princDifPath = "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Principais-Diferencas.md";
 
 class TutorialsContent extends Component {
     constructor(props) {
@@ -24,36 +32,35 @@ class TutorialsContent extends Component {
       const contentSrc = this.fetchContentPath(this.state.currentTutorial, this.state.currentChapter);
       console.log(contentSrc);
 
-      import(contentSrc).then(
-          (content) => {
-            this.setState({content: content})
-          },
-          () => {
-            this.setState({content: null})
-          }
-      );
+      this.changeContentState();
     }
 
     componentDidUpdate(prevProps) {
       if(this.state.currentTutorial !== this.props.match.params.tutorial ||
-          this.state.currentChapter !== this.props.match.params.chapter )
-      {
+          this.state.currentChapter !== this.props.match.params.chapter ) {
+
+        this.changeContentState();
         this.setState({
           currentTutorial: this.props.match.params.tutorial,
           currentChapter: this.props.match.params.chapter,
         });
+      }
+    }
 
-        const contentSrc = this.fetchContentPath(this.state.currentTutorial, this.state.currentChapter);
+    changeContentState(){
+        const contentSrc = this.fetchContentPath(this.props.match.params.tutorial, this.props.match.params.chapter);
         console.log(contentSrc);
 
-        console.log("c = ");
-        console.log(c);
-        fetch(c)
+        let trueContentSrc = undefined;
+        if( contentSrc === cCsharpPath ) trueContentSrc = cCsharp;
+        else if ( contentSrc === helloWPath ) trueContentSrc = helloW;
+        else if ( contentSrc === princDifPath ) trueContentSrc = princDif;
+
+        fetch(trueContentSrc)
             .then(res => res.text())
             .then( text => {
               this.setState({content: text})
             });
-      }
     }
 
     fetchContentPath(tutorialUrl, chapterUrl){

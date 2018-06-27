@@ -2,11 +2,6 @@
     display: block;
 }
 
-#but {
-    position: absolute;
-    top: 0;
-}
-
 #tutorialsSidebar {
     min-width: 20%;
     min-height: 50%;
@@ -14,10 +9,10 @@
     height: auto;
 
     display: block;
-    position: relative;
+    /*position: relative;*/
     padding: 0;
 
-    border-radius: 20%;
+    border-radius: 5%;
 
     font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
     font-weight: normal;
@@ -70,16 +65,26 @@
  *
  */
 
+
+#but {
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    height: fit-content;
+
+    float: left;
+}
+
 .tutorialContentWrapper {
     width: 90%;
     background: #fcfff5;
     margin-left: 5%;
     margin-right: 5%;
-    border-radius: 1%;
+    border-radius: 0.25%;
 }
 
 div.tutorialContent {
-    /*position: fixed;*/
     top: 10%;
     right: 0;
     left: 10%;
@@ -100,7 +105,9 @@ div.tutorialContent {
     text-transform: none;
 }
 
-div.tutorialContent h2 {
+div.tutorialContent h1,
+div.tutorialContent h2,
+div.tutorialContent h3 {
     font-weight: bold;
     font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
     font-size: 200%;
