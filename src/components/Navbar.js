@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component  } from 'react'
 import { Menu } from 'semantic-ui-react'
 import logo from '../assets/images/landing-page/logo.png'
+import {NavLink} from 'react-router-dom';
 
 
 export default class Navbar extends Component {
@@ -14,21 +15,29 @@ export default class Navbar extends Component {
     return (
       <div>
         <Menu color='blue' fixed="top" inverted>
-          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} >
+          <Menu.Item
+            as={NavLink} to='/'
+            name='home'
+            active={activeItem === 'home'}
+            onClick={this.handleItemClick}
+          >
             <img src={logo} />
           </Menu.Item>
           <Menu.Item
-            name='Projetos'
+            as={NavLink} to='/projects'
+            name='PROJETOS'
             active={activeItem === 'Projetos'}
             onClick={this.handleItemClick}
           />
           <Menu.Item
-            name='Tutoriais'
+            as={NavLink} to='/tutorials'
+            name='TUTORIAIS'
             active={activeItem === 'Tutoriais'}
             onClick={this.handleItemClick}
           />
           <Menu.Item
-            name='Membros'
+            as={NavLink} to='/members'
+            name='MEMBROS'
             active={activeItem === 'Membros'}
             onClick={this.handleItemClick}
           />
