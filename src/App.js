@@ -15,17 +15,17 @@ import TutorialsPage from './TutorialsPage'
 export default class App extends Component {
   render () {
     return (
-    <Router>
-      <div>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route path="/projects" component={ProjectsPage} />
-          <Route path="/members" component={MembersPage}/>
-          <Route path="/tutorials" component={TutorialsPage} />
-        </Switch>
-      </div>
-    </Router>
-    );
+      <Router>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={LandingPage} />
+            <Route path='/projects' component={ProjectsPage} />
+            <Route path='/members' component={MembersPage} />
+            <Route path='/tutorials' component={TutorialsPage} />
+          </Switch>
+        </div>
+      </Router>
+    )
   };
 }
