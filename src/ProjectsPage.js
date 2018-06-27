@@ -1,33 +1,72 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ProjectCard from './components/ProjectCard'
 import projectsArray from './assets/data/projects_data'
-import { Icon, Container, Header, Grid } from 'semantic-ui-react'
-
+import {Sidebar, Button, Segment} from 'semantic-ui-react'
 import './style/ProjectsPage.css'
 
-export default props => {
-  const cardList = projectsArray.map((item, index) => {
-    return (
-      <ProjectCard
-        title={item.name}
-        info={item.info}
-        src={item.img}
-        gif={item.gif}
-        key={index}
-        alt={item.alt}
-        developers={item.developers}
-        code={item.codeLink}
-        demo={item.demoLink}
-      />
-    )
-  })
+class ProjectsPage extends Component {
+  constructor (props) {
+    super(props)
 
-  return (
-    <section id='projects'>
-      <h1>Projects<a href='/projects'><Icon name='arrow right' /></a></h1>
-      <div className='row'>
-        {cardList}
-      </div>
-    </section>
-  )
+    /* Enabled - Disabled button effect */
+
+    this.cardList = projectsArray.map((item, index) => {
+      return (
+        <ProjectCard
+          title={item.name}
+          info={item.info}
+          src={item.img}
+          gif={item.gif}
+          key={index}
+          alt={item.alt}
+          developers={item.developers}
+          code={item.codeLink}
+          demo={item.demoLink}
+        />
+      )
+    })
+
+    this.selectCardFromList = (year) => {
+      console.log('TESTING YEAR ', year)
+      this.cardDivList = document.getElementsByClassName('card col m6 s12 l4')
+      // console.log(this.cardDivList.length)
+
+      for (var i = 0; i < this.cardDivList.length; i++) {
+        // this.cardDivList[i].className = this.cardList[i].year === '2018' ? 'card col m6 s12 l4' : 'card-hidden'
+        if (projectsArray[i].year === year || year === 'All') {
+          // console.log(i, " has year 2018")
+          this.cardDivList[i].style.display = 'inline'
+        } else {
+          // console.log(i, ' has year ', projectsArray[i].year)
+          this.cardDivList[i].style.display = 'none'
+        }
+        console.log(this.cardDivList.length)
+      }
+    }
+  }
+
+  render () {
+    return (
+      <section id='projects'>
+        <h1>Projects<a href='/projects' /></h1>
+        <Button class="year-btn" onClick={() => {
+          this.selectCardFromList('All')
+        }}>ALL</Button>
+        <Button class="year-btn" onClick={() => {
+          this.selectCardFromList('2018')
+        }}>2018</Button>
+        <Button class="year-btn" onClick={() => {
+          this.selectCardFromList('2017')
+        }}>2017</Button>
+        <Button class="year-btn" onClick={() => {
+          this.selectCardFromList('2011')
+        }}>2011</Button>
+        <div className='row'>
+          {this.cardList}
+        </div>
+      </section>
+    )
+  }
 }
+
+export default ProjectsPage

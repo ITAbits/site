@@ -16,7 +16,8 @@ export default [
     alt: 'Balance',
     developers: 'Carlos Matheus, Eric Moreira and Igor Ribeiro',
     codeLink: 'https://github.com/CarlosMatheus/Balance',
-    demoLink: 'https://www.youtube.com/watch?v=lTkGqDNsmqQ&t=2s'
+    demoLink: 'https://www.youtube.com/watch?v=lTkGqDNsmqQ&t=2s',
+    year: '2018'
   },
   {
     name: 'Overhead',
@@ -26,7 +27,8 @@ export default [
     alt: 'Overhead',
     developers: 'Carlos Matheus, Francisco Castro and Luiz Henrique Aguiar',
     codeLink: 'https://github.com/CarlosMatheus/Overhead',
-    demoLink: 'https://chicomcastro.itch.io/overhead'
+    demoLink: 'https://chicomcastro.itch.io/overhead',
+    year: '2017'
   },
   {
     name: 'Pandoodle',
@@ -36,12 +38,14 @@ export default [
     alt: 'Pandoodle',
     developers: 'Vinicius Canaã e Lucas Mattos',
     codeLink: 'https://github.com/vcanaa',
-    demoLink: 'https://play.google.com/store/apps/details?id=com.baldbeangames.pandoodlefull&hl=en'
+    demoLink: 'https://play.google.com/store/apps/details?id=com.baldbeangames.pandoodlefull&hl=en',
+    year: '2011'
   }
   // {
   //   name: 'Ricochette',
   //   info: 'Ricochette is a two-player shooter game. Play against your friends and remember... the more you shoot, the worst it is not just for your opponent, but for yourself as well.',
-  //   img: ricochette,
+  //   img: ricochetteimg,
+  //   gif: ,
   //   alt: 'Ricochette',
   //   developers: 'Felipe Guimarães',
   //   codeLink: 'https://github.com/guimafelipe/ricochette',
