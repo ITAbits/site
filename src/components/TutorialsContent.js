@@ -3,7 +3,8 @@ import { Segment, Header } from 'semantic-ui-react';
 import  ReactMarkdown from 'react-markdown';
 
 import CodeBlockRenderer from "./CodeBlockRenderer";
-import ImageBlockRenderer from "./ImageBlockRenderer";
+import ImageRenderer from "./ImageRenderer";
+import LinkRenderer from "./LinkRenderer";
 
 import discord from "../assets/data/tutoriais/discord/readme.md";
 import cCsharp from "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/README.md";
@@ -52,7 +53,8 @@ class TutorialsContent extends Component {
         console.log(contentSrc);
 
         let trueContentSrc = undefined;
-        if( contentSrc === cCsharpPath ) trueContentSrc = cCsharp;
+        if ( contentSrc === discordPath ) trueContentSrc = discord;
+        else if( contentSrc === cCsharpPath ) trueContentSrc = cCsharp;
         else if ( contentSrc === helloWPath ) trueContentSrc = helloW;
         else if ( contentSrc === princDifPath ) trueContentSrc = princDif;
 
@@ -153,13 +155,13 @@ class TutorialsContent extends Component {
         return(
 
             <Segment>
-              <Header as='h3'> {this.state.currentTutorial+"/"+this.state.currentChapter} Tutorial</Header>
               <div className="tutorialContentWrapper">
                 {content ?
                     <ReactMarkdown className="tutorialContent"
                                    renderers={{
                                      code: CodeBlockRenderer,
-                                     img: ImageBlockRenderer
+                                     img: ImageRenderer,
+                                     a: LinkRenderer
                                    }}
                                    source={content}
                                    escapeHtml={false}

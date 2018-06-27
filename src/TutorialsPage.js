@@ -46,7 +46,6 @@ class TutorialsPage extends Component {
 
                   <Sidebar id="tutorialsSidebar" as={Menu} animation="push" visible={this.state.visible}
                              direction="left" vertical inverted>
-                    <Button onClick={this.toggleVisible} > I exist! </Button>
                     <TutorialsList parentPath={this.path} list={this.tutorials}/>
                   </Sidebar>
 
@@ -73,8 +72,12 @@ class TutorialsHome extends Component {
 
   render(){
     return (
-        <div className="tutorialsContent">
-          <h3> TUTORIALS HOME! </h3>
+        <div className="tutorialContent">
+          <h3> Bem vindo à página de tutoriais da ITABits! </h3>
+          <p>
+            Para navegar entre nossos conteúdos basta utilizar a barra de navegação lateral. Você é livre para
+            usá-los, distribuí-los ou alterá-los como entender mas pedimos que cite os autores originais.
+          </p>
         </div>
     );
   }
