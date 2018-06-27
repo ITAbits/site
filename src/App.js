@@ -15,17 +15,6 @@ import TutorialsPage from './TutorialsPage'
 export default class App extends Component {
   render () {
     return (
-<<<<<<< HEAD
-      <Router>
-        <div>
-          <Route exact path='/' component={LandingPage} />
-          <Route path='/projects' component={ProjectsPage} />
-          <Route path='/members' component={MembersPage} />
-          <Route path='/tutorials' component={TutorialsPage} />
-        </div>
-      </Router>
-    )
-=======
     <Router>
       <div>
         <Navbar />
@@ -38,6 +27,5 @@ export default class App extends Component {
       </div>
     </Router>
     );
->>>>>>> 1499294c0a52680b1e6af45178ea64fd12a70016
   };
 }
