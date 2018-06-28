@@ -12,6 +12,8 @@ O backend, por sua vez, foi feito em Python utilizando-se a framework [Flask](ht
 
 O domínio alugado do nosso site é www.itabits.com.br mas o projeto encontra-se deployado em sua última versão [aqui](http://itabits-site.herokuapp.com/)
 
+![](./public/qr_webits.png)
+
 Contribuindo
 ==========
 
