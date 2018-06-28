@@ -6,8 +6,7 @@ import os
 
 
 app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://rfucmrtvfpvoeq:5214eef0596fd6eb176c63dc73049890b479bbd99f309d892ba50e268703e537@ec2-23-23-245-89.compute-1.amazonaws.com:5432/d8ie6ug9mg5s71'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 db = SQLAlchemy(app)
 
 
