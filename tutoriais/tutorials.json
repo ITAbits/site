@@ -1,0 +1,38 @@
+{
+  "tutorials": [
+  	{
+  	  "title": "Usando o Discord",
+  	  "content_url": "/discord",
+  	  "content_path": "/discord/",
+  	  "content_file": "readme.md",
+  	  "chapters": []
+  	},
+    {
+      "title": "De C para C#",
+      "content_url": "/ccsharp",
+      "content_path": "/ccsharp/docs/De-C-para-Csharp/",
+      "content_file": "readme.md",
+      "chapters": [
+        {
+          "title": "Hello World! (Windows)",
+          "content_url": "/helloworld",
+          "content_path": "",
+          "content_file": "primeiro-projeto-windows.md"
+        },
+        {
+          "title": "Principais diferenças",
+          "content_url": "/principaisdiferencas",
+          "content_path": "",
+          "content_file": "principais-diferencas.md"
+        }
+      ]
+    },
+    {
+      "title": "Unity",
+      "content_url": "/unity",
+      "content_path": "/unity/",
+      "content_file": "test.md",
+      "chapters": []
+    }
+  ]
+}
