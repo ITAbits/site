@@ -3,8 +3,8 @@
 }
 
 #tutorials-section {
-    padding: 4rem 10rem;
-    background: url("../assets/images/landing-page/dark-blue-degrade.jpg");
+    padding: 2em 2em;
+    background: url("../assets/images/projects/background-projects.jpg");
 }
 
 #tutorials-section span {
@@ -12,10 +12,10 @@
 }
 
 #tutorials-section img {
-    height: 40%;
+    height: auto;
     width: 40%;
-    margin-left: 25%;
-    margin-right: 50%;
+    horiz-align: center;
+    vertical-align: center;
 }
 
 #tutorials-section h5 {
@@ -33,4 +33,9 @@
     text-transform: none;
     color: white;
     font-size: 130%;
+}
+
+#balloon {
+    width: 50em;
+    height: auto;
 }

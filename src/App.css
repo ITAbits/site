@@ -4,6 +4,7 @@
 }
 
 body {
+    padding-top: 62px;
 }
 
 /*
@@ -267,7 +268,6 @@ nav {
 }
 .img-container {
     display:inline;
-    background-image: url("assets/images/landing-page/balltris.png");
 }
 
 .word-container {
