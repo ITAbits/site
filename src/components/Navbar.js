@@ -4,10 +4,9 @@ import logo from '../assets/images/landing-page/itabits-logo.png'
 import '../style/Navbar.css'
 
 export default class Navbar extends Component {
-
   render () {
     return (
-      <div id='navBar'>
+      <div class='container'>
         <nav className='navbar navbar-inverse navbar-fixed-top'>
           <div className='container-fluid'>
             <div className='navbar-header'>

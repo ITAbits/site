@@ -8,7 +8,7 @@ import '../style/Info.css'
 
 export default props => {
   return (
-    <div id='info-container'>
+    <div>
       <section id='info-section'>
         <h3>NOSSAS ATIVIDADES</h3>
         <Grid centered stackable columns={3} verticalAlign='middle'>

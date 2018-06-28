@@ -7,6 +7,7 @@ import ProjectsSector from './components/ProjectsSector'
 import Footer from './components/footer'
 import InfoSector from './components/InfoSector'
 import TutorialsSector from './components/TutorialsSector'
+import CalendarSector from './components/CalendarSection'
 
 // External pages sections
 
@@ -17,6 +18,7 @@ class LandingPage extends Component {
         <Header />
         <About />
         <InfoSector />
+        <CalendarSector />
         <ProjectsSector />
         <TutorialsSector />
         <Footer />
