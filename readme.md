@@ -10,7 +10,7 @@ A administração de rotas por componentes React foi feita por meio da bibliotec
 
 O backend, por sua vez, foi feito em Python utilizando-se a framework [Flask](http://flask.pocoo.org/), a qual serve ao frontend estático buildado previamente antes do deploy. O backend foi projetado como uma RESTful API e tem como endpoints o cadastro de membros e a query de membros da ITA Bits, por exemplo. O salvamento de imagens é feito em um bucket Amazon S3 para não pesar o banco de dados hospedado no Heroku.
 
-O domínio alugado do nosso site é www.itabits.com.br mas o projeto encontra-se deployado em sua última versão em itabits-site.herokuapp.com
+O domínio alugado do nosso site é www.itabits.com.br mas o projeto encontra-se deployado em sua última versão [aqui](http://itabits-site.herokuapp.com/)
 
 Contribuindo
 ==========
