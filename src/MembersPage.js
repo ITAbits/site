@@ -15,15 +15,12 @@ class MembersPage extends React.Component {
   }
 
   componentDidMount() {
-
     let proxyUrl = "https://cors-anywhere.herokuapp.com/",
         targetUrl = "https://itabits.herokuapp.com/getmembers"
-    console.log(proxyUrl+targetUrl);
      fetch(proxyUrl+targetUrl)
        .then(res => res.json())
        .then(
          (result) => {
-           console.log(result.members);
            result.members.sort(function(a, b){
                if(a.to > b.to)
                   return true;

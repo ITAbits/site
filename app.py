@@ -65,16 +65,20 @@ class Member(db.Model):
     secondname = db.Column(db.Unicode(), nullable=True)
     callby = db.Column(db.Unicode(), nullable=False)
     since = db.Column(db.Integer, nullable=False)
-    to = db.Column(db.Integer, nullable=True)
+    to = db.Column(db.Integer, nullable=False)
     imagelink = db.Column(db.Unicode(), nullable=False)
+    github = db.Column(db.Unicode(), nullable=True)
+    linkedin = db.Column(db.Unicode(), nullable=True)
 
-    def __init__(self, firstname, secondname, callby, since, to, imagelink):
+    def __init__(self, firstname, secondname, callby, since, to, imagelink, github, linkedin):
         self.firstname = firstname
         self.secondname = secondname
         self.callby = callby
         self.since = since
         self.to = to
         self.imagelink = imagelink
+        self.github = github
+        self.linkedin = linkedin
 
     def as_dict(self):
         dicionario = {c.name: getattr(self, c.name) for c in self.__table__.columns}

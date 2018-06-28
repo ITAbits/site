@@ -13,7 +13,7 @@ export default props => {
                 {props.callby}
               </Card.Header>
               <Card.Meta>
-                {props.since} - {props.to}
+                20{props.since} - 20{props.to}
               </Card.Meta>
                 <a><Icon name='github square'/></a>
                 <a><Icon name='linkedin square'/></a>
