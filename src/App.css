@@ -10,6 +10,7 @@ html {
 }
 
 body {
+    padding-top: 60px;
     height: 100%;
     width: 100%;
 
@@ -290,7 +291,6 @@ nav {
 }
 .img-container {
     display:inline;
-    background-image: url("assets/images/landing-page/balltris.png");
 }
 
 .word-container {

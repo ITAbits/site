@@ -8,7 +8,6 @@ export default props => {
     <div id='about-container'>
       <section id='about-section'>
         <h3>QUEM SOMOS?</h3>
-        <hr />
         <p>
           A ITA Bits é um grupo de desenvolvimento de software criado e mantido por alunos de graduação do Instituto Tecnológico de Aeronáutica (ITA).
           O objetivo da equipe é centralizar o desenvolvimento de software em um ambiente onde as pessoas possam aprender e produzir juntas.
