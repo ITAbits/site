@@ -18,7 +18,8 @@ class TutorialsList extends Component {
                 <TutorialsListItem key={index}
                                    title={tutorial.title}
                                    url={this.parentPath + tutorial.content_url}
-                                   chapters={tutorial.chapters}/>
+                                   chapters={tutorial.chapters}
+                />
             );
         });
 
