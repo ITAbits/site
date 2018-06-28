@@ -22,12 +22,12 @@ def getmembers():
 @app.route('/addmember', methods=["POST"])
 def addmember():
     try:
+        imagelink = saveImage(request.files['image'])
         firstname = request.form['firstname']
         secondname = request.form['secondname']
         callby = request.form['callby']
         since = request.form['since']
         to = request.form['to']
-        imagelink = request.form['imagelink']
 
         member = Member(firstname, secondname, callby, since, to, imagelink)
 
@@ -44,7 +44,7 @@ def saveImage(file):
     if extension == '':
         return None
 
-    filename = str(uuid.uuid4()) + extension
+    filename = "BITS" + str(uuid.uuid4()) + extension
     s3 = boto3.resource('s3')
     S3_BUCKET = os.environ.get('S3_BUCKET')
     s3.Bucket(S3_BUCKET).put_object(Key=filename, Body=file, CacheControl='max-age:2592000')
@@ -53,9 +53,11 @@ def saveImage(file):
 
     return path
 
+
 @app.route('/', methods=["GET"])
 def index():
     return render_template('index.html')
+
 
 class Member(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -77,6 +79,7 @@ class Member(db.Model):
     def as_dict(self):
         dicionario = {c.name: getattr(self, c.name) for c in self.__table__.columns}
         return dicionario
+
 
 if __name__ == '__main__':
     app.run()
