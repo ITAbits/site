@@ -6,12 +6,6 @@ import CodeBlockRenderer from "./CodeBlockRenderer";
 import ImageRenderer from "./ImageRenderer";
 import LinkRenderer from "./LinkRenderer";
 
-const discordPath = "tutorials/discord/readme.md";
-const cCsharpPath = "tutorials/ccsharp/docs/De-C-para-C#/README.md";
-const helloWPath = "tutorials/ccsharp/docs/De-C-para-C#/Primeiro-Projeto-(Windows).md";
-const princDifPath = "tutorials/ccsharp/docs/De-C-para-C#/Principais-Diferencas.md";
-const unityPath = "tutorials/unity/test.md";
-
 class TutorialsContent extends Component {
     constructor(props) {
       super(props);
@@ -35,6 +29,7 @@ class TutorialsContent extends Component {
       if(this.state.currentTutorial !== this.props.tutorial ||
           this.state.currentChapter !== this.props.chapter ) {
 
+        console.log("Update tutorial content");
         this.changeContentState();
         this.setState({
           currentTutorial: this.props.tutorial,
@@ -44,28 +39,23 @@ class TutorialsContent extends Component {
     }
 
     changeContentState() {
+      const contentUrl = this.fetchContentPath(this.props.tutorial, this.props.chapter);
 
-        const contentSrc = this.fetchContentPath(this.props.tutorial, this.props.chapter);
-        console.log(contentSrc);
-
-        // let trueContentSrc = undefined;
-        // if ( contentSrc === discordPath ) trueContentSrc = discord;
-        // else if( contentSrc === cCsharpPath ) trueContentSrc = cCsharp;
-        // else if ( contentSrc === helloWPath ) trueContentSrc = helloW;
-        // else if ( contentSrc === princDifPath ) trueContentSrc = princDif;
-        // else if ( contentSrc === unityPath ) trueContentSrc = unity;
-
-        fetch(contentSrc)
-            .then(res => res.text())
-            .then( text => {
-              this.setState({
-                isLoaded: true,
-                content: text
-              })
-            });
+      console.log("Sending GET request to");
+      console.log(contentUrl);
+      fetch(contentUrl)
+          .then( res => res.text() )
+          .then( text => {
+            console.log("Fetched content!");
+            console.log(text);
+            this.setState({
+              isLoaded: true,
+              content: text
+            })
+          });
     }
 
-    fetchContentPath(tutorialUrl, chapterUrl){
+    fetchContentPath(tutorialUrl, chapterUrl) {
       if (tutorialUrl === undefined || tutorialUrl === null || tutorialUrl.length <= 0) {
         return "";
       }
@@ -73,18 +63,18 @@ class TutorialsContent extends Component {
 
       const hasChapter = chapterUrl !== undefined && chapterUrl !== null && chapterUrl.length > 0;
 
-      if ( tutorialUrl[0] !== "/" ){
+      if ( tutorialUrl[0] !== "/" ) {
         tutorialUrl = "/" + tutorialUrl;
       }
 
-      if ( hasChapter && chapterUrl[0] !== "/"){
+      if ( hasChapter && chapterUrl[0] !== "/") {
         chapterUrl  = "/" + chapterUrl;
       }
 
       const database = this.state.database["tutorials"];
       console.log(database);
       let tutorialPath, chapterPath, file = undefined;
-      if ( !hasChapter ){
+      if ( !hasChapter ) {
         chapterPath = "";
       }
 
@@ -125,7 +115,7 @@ class TutorialsContent extends Component {
         return "";
       }
 
-      let formattedPath = "tutorials";
+      let formattedPath = "https://raw.githubusercontent.com/ITAbits/tutoriais/master";
 
       if ( tutorialPath[0] !== '/' ) {
         formattedPath += "/" + tutorialPath;
