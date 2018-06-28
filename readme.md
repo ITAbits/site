@@ -8,7 +8,7 @@ O frontend do site foi construído em torno de ReactJS, utilizando de suporte a 
 
 A administração de rotas por componentes React foi feita por meio da biblioteca [React-Router](https://reacttraining.com/react-router/), retirando do backend a responsabilidade de conexão entre links da camada de View e as URLs de requisição do servidor. Desse modo, é possível ter o site lançado sem backend, se necessário, pelo sistema GitHub-Pages.
 
-O backend, por sua fez foi feito em Python utilizando-se a framework [Flask](http://flask.pocoo.org/), a qual serve ao frontend estático buildado previamente antes do deploy. O backend foi projetado como uma RESTful API e tem como endpoints o cadastro de membros e a query de membros da ITA Bits, por exemplo. O salvamento de imagens é feito em um bucket Amazon S3 para não pesar o banco de dados hospedado no Heroku.
+O backend, por sua vez, foi feito em Python utilizando-se a framework [Flask](http://flask.pocoo.org/), a qual serve ao frontend estático buildado previamente antes do deploy. O backend foi projetado como uma RESTful API e tem como endpoints o cadastro de membros e a query de membros da ITA Bits, por exemplo. O salvamento de imagens é feito em um bucket Amazon S3 para não pesar o banco de dados hospedado no Heroku.
 
 O domínio alugado do nosso site é www.itabits.com.br mas o projeto encontra-se deployado em sua última versão em itabits-site.herokuapp.com
 
