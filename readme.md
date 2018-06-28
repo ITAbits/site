@@ -4,13 +4,13 @@ Website ITABits
 
 Esse é o repositório relativo ao website da ITABits, onde desenvolvemos uma boa imagem do grupo, divulgando os membros, os projetos desenvolvidos pela equipe, eventos participados e materiais de estudo produzidos por nós mesmos.
 
-O frontend do site foi contruído em torno de ReactJS, utilizando de suporte a biblioteca de design [Semantic UI](https://semantic-ui.com/) ou mais precisamente a sua interface com React, [Semantic UI React](https://react.semantic-ui.com/introduction).
+O frontend do site foi construído em torno de ReactJS, utilizando de suporte a biblioteca de design [Semantic UI](https://semantic-ui.com/) ou, mais precisamente, a sua interface com React, [Semantic UI React](https://react.semantic-ui.com/introduction).
 
-A administração de rotas por componentes React foi feita usando a biblioteca [React-Router](https://reacttraining.com/react-router/) retirando do backend a responsabilidade de conexão entre links da camada de View e as URLs de requisição do servidor. Desse modo, é possível ter o site lançado sem backend se necessário, pelo sistema de GitHub-Pages.
+A administração de rotas por componentes React foi feita por meio da biblioteca [React-Router](https://reacttraining.com/react-router/), retirando do backend a responsabilidade de conexão entre links da camada de View e as URLs de requisição do servidor. Desse modo, é possível ter o site lançado sem backend, se necessário, pelo sistema GitHub-Pages.
 
-Possuímos um banco de dados de membros e projetos em PostgreSQL e para gerenciá-lo e também ter uma alternativa de administração de rotas foi feito um backend com a framework [Flask](http://flask.pocoo.org/) para Python. Dessa maneira, também podemos subir o site em serviços de hospedagem mantendo o front bem desacoplado com o back.
+O backend, por sua fez foi feito em Python utilizando-se a framework [Flask](http://flask.pocoo.org/), a qual serve ao frontend estático buildado previamente antes do deploy. O backend foi projetado como uma RESTful API e tem como endpoints o cadastro de membros e a query de membros da ITA Bits, por exemplo. O salvamento de imagens é feito em um bucket Amazon S3 para não pesar o banco de dados hospedado no Heroku.
 
-O domínio alugado do nosso site é www.itabits.com.br
+O domínio alugado do nosso site é www.itabits.com.br mas o projeto encontra-se deployado em sua última versão em itabits-site.herokuapp.com
 
 Contribuindo
 ==========
@@ -37,7 +37,7 @@ Dependendo de suas configurações de permissão e ownership você precisará ex
 sudo npm run deploy
 ```
 
-E nesse caso provavelmente serão necessárias configurações padrão globais do git para executar o deploy. 
+E nesse caso provavelmente serão necessárias configurações padrão globais do git para executar o deploy.
 Configure essas condições utilizando:
 
 ```sh
