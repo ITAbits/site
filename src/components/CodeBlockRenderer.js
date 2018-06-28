@@ -25,6 +25,7 @@ class CodeBlock extends React.PureComponent {
   }
 
   render() {
+    console.log("CHEGOUU CODE");
     return (
         <pre>
         <code ref={this.setRef} className={`language-${this.props.language}`}>

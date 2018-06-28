@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List } from 'semantic-ui-react';
+import { List, Divider } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 import TutorialsListItem from './TutorialsListItem';
@@ -18,20 +18,12 @@ class TutorialsList extends Component {
                 <TutorialsListItem key={index}
                                    title={tutorial.title}
                                    url={this.parentPath + tutorial.content_url}
-                                   chapters={tutorial.chapters}/>
+                                   chapters={tutorial.chapters}
+                />
             );
         });
 
-        return(
-            <div>
-              <header>
-                <Link to={this.parentPath}> Tutoriais </Link>
-              </header>
-              <List bulleted vertical inverted>
-                  {tutorialItems}
-              </List>
-            </div>
-        );
+        return tutorialItems;
     };
 }
 

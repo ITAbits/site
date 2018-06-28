@@ -1,59 +1,68 @@
 import React, { Component } from 'react';
-import { Segment, Header } from 'semantic-ui-react';
+import { Segment, Loader } from 'semantic-ui-react';
 import  ReactMarkdown from 'react-markdown';
 
 import CodeBlockRenderer from "./CodeBlockRenderer";
-import ImageBlockRenderer from "./ImageBlockRenderer";
+import ImageRenderer from "./ImageRenderer";
+import LinkRenderer from "./LinkRenderer";
 
-import c from "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Principais-Diferencas.md";
-
-import TUTORIAL_DATA from "../assets/data/tutoriais/tutorials.json";
+const discordPath = "tutorials/discord/readme.md";
+const cCsharpPath = "tutorials/ccsharp/docs/De-C-para-C#/README.md";
+const helloWPath = "tutorials/ccsharp/docs/De-C-para-C#/Primeiro-Projeto-(Windows).md";
+const princDifPath = "tutorials/ccsharp/docs/De-C-para-C#/Principais-Diferencas.md";
+const unityPath = "tutorials/unity/test.md";
 
 class TutorialsContent extends Component {
     constructor(props) {
       super(props);
-
+      console.log("props");
+      console.log(props);
       this.state = {
-        currentTutorial: props.match.params.tutorial,
-        currentChapter: props.match.params.chapter,
+        currentTutorial: props.tutorial,
+        currentChapter: props.chapter,
+        database: props.database,
+        isLoaded: false,
         content: null
       };
     }
 
-    componentDidMount(){
-      const contentSrc = this.fetchContentPath(this.state.currentTutorial, this.state.currentChapter);
-      console.log(contentSrc);
+    componentDidMount() {
 
-      import(contentSrc).then(
-          (content) => {
-            this.setState({content: content})
-          },
-          () => {
-            this.setState({content: null})
-          }
-      );
+      this.changeContentState();
     }
 
     componentDidUpdate(prevProps) {
-      if(this.state.currentTutorial !== this.props.match.params.tutorial ||
-          this.state.currentChapter !== this.props.match.params.chapter )
-      {
-        this.setState({
-          currentTutorial: this.props.match.params.tutorial,
-          currentChapter: this.props.match.params.chapter,
-        });
+      if(this.state.currentTutorial !== this.props.tutorial ||
+          this.state.currentChapter !== this.props.chapter ) {
 
-        const contentSrc = this.fetchContentPath(this.state.currentTutorial, this.state.currentChapter);
+        this.changeContentState();
+        this.setState({
+          currentTutorial: this.props.tutorial,
+          currentChapter: this.props.chapter,
+        });
+      }
+    }
+
+    changeContentState() {
+
+        const contentSrc = this.fetchContentPath(this.props.tutorial, this.props.chapter);
         console.log(contentSrc);
 
-        console.log("c = ");
-        console.log(c);
-        fetch(c)
+        // let trueContentSrc = undefined;
+        // if ( contentSrc === discordPath ) trueContentSrc = discord;
+        // else if( contentSrc === cCsharpPath ) trueContentSrc = cCsharp;
+        // else if ( contentSrc === helloWPath ) trueContentSrc = helloW;
+        // else if ( contentSrc === princDifPath ) trueContentSrc = princDif;
+        // else if ( contentSrc === unityPath ) trueContentSrc = unity;
+
+        fetch(contentSrc)
             .then(res => res.text())
             .then( text => {
-              this.setState({content: text})
+              this.setState({
+                isLoaded: true,
+                content: text
+              })
             });
-      }
     }
 
     fetchContentPath(tutorialUrl, chapterUrl){
@@ -72,7 +81,7 @@ class TutorialsContent extends Component {
         chapterUrl  = "/" + chapterUrl;
       }
 
-      const database = TUTORIAL_DATA["tutorials"];
+      const database = this.state.database["tutorials"];
       console.log(database);
       let tutorialPath, chapterPath, file = undefined;
       if ( !hasChapter ){
@@ -116,7 +125,7 @@ class TutorialsContent extends Component {
         return "";
       }
 
-      let formattedPath = "../assets/data/tutoriais";
+      let formattedPath = "tutorials";
 
       if ( tutorialPath[0] !== '/' ) {
         formattedPath += "/" + tutorialPath;
@@ -143,25 +152,41 @@ class TutorialsContent extends Component {
     render() {
         const { content } = this.state;
 
-        return(
+        if ( !this.state.isLoaded ) {
+          return (
+            <Loader />
+          );
+        }
+        else {
+          return (
 
-            <Segment>
-              <Header as='h3'> {this.state.currentTutorial+"/"+this.state.currentChapter} Tutorial</Header>
-              <div className="tutorialContentWrapper">
-                {content ?
-                    <ReactMarkdown className="tutorialContent"
-                                   renderers={{
-                                     code: CodeBlockRenderer,
-                                     img: ImageBlockRenderer
-                                   }}
-                                   source={content}
-                                   escapeHtml={false}
-                    />
-                    : null }
-              </div>
+              <Segment>
+                <div className="tutorialContentWrapper">
+                  {content ?
+                      <ReactMarkdown className="tutorialContent"
+                                     renderers={{
+                                       code: CodeBlockRenderer,
+                                       img: ImageRenderer,
+                                       a: LinkRenderer
+                                     }}
+                                     source={content}
+                                     escapeHtml={false}
+                      />
+                      : <NoTutorial/>}
+                </div>
               </Segment>
-        );
+          );
+        }
     }
+}
+
+class NoTutorial extends React.Component {
+
+  render() {
+    return (
+      <span> Oi ! </span>
+    );
+  }
 }
 
 export default TutorialsContent;
