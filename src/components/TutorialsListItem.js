@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List } from 'semantic-ui-react';
+import { List, Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 class TutorialsListItem extends Component {
@@ -30,12 +30,12 @@ class TutorialsListItem extends Component {
 
 
         return(
-                <List.Item className="tutorialsSidebarItem">
-                    <Link className="tutorialTitle" to={this.content_url}> {this.title} </Link>
+                <Menu.Item className="tutorialsSidebarItem">
+                    <Link id="tutorialTitle" to={this.content_url}> {this.title} </Link>
                     <List bulleted vertical>
                         {chapterItems}
                     </List>
-                </List.Item>
+                </Menu.Item>
         );
     }
 }
