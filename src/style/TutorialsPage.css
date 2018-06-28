@@ -24,7 +24,7 @@
     display: block;
 
     font-size: 100%;
-    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+    font-family: Montserrat;
     font-weight: bold;
 
     text-transform: none;
@@ -46,7 +46,7 @@
 
     color: azure;
     font-size: 80%;
-    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+    font-family: Montserrat;
     font-weight: normal;
 
     text-align: left;
@@ -66,14 +66,21 @@
  */
 
 
-#but {
-    position: absolute;
+#sidebarButton {
+    position: relative;
     z-index: 200;
     top: 0;
     left: 0;
     height: fit-content;
 
     float: left;
+
+    horiz-align: center;
+    padding-right: 2% !important;
+    padding-left: 2%;
+
+    background-color: rgb(27, 28, 29);
+    border-radius: 0;
 }
 
 .tutorialContentWrapper {

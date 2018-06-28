@@ -3,6 +3,9 @@ import overheadimg from '../images/projects/overhead.png'
 import pandoodleimg from '../images/projects/pandoodle.jpg'
 import ricochetteimg from '../images/projects/ricochette.png'
 import falldawnimg from '../images/projects/falldawn.png'
+import waiterimg from '../images/projects/waiter.png'
+import awakeningimg from '../images/projects/awakening.jpg'
+import afraidimg from '../images/projects/aotd.png'
 
 import balancegif from '../images/projects/balance.gif'
 import overheadgif from '../images/projects/overhead.gif'
@@ -53,15 +56,49 @@ export default [
     codeLink: 'https://github.com/deusdaluz',
     demoLink: 'https://www.youtube.com/watch?time_continue=1&v=rtF50nlVCCw',
     year: '2009'
+  },
+  {
+    name: 'Ricochette',
+    info: 'Ricochette is a two-player shooter game. Play against your friends and remember... the more you shoot, the worst it is not just for your opponent, but for yourself as well.',
+    img: ricochetteimg,
+    gif: '',
+    alt: 'Ricochette',
+    developers: 'Felipe Guimarães',
+    codeLink: 'https://github.com/guimafelipe/ricochette',
+    demoLink: 'https://www.kongregate.com/games/FlpGuima/ricochette',
+    year: '2017'
+  },
+  {
+    name: 'Waiter Sim',
+    info: 'You are a Waiter and must work feeding others in order to feed yourself! People are coming to eat and you can’t make them wait! The more they wait, the more angry they get! Shoot the food at their faces to feed them, but caution: if you shoot the wrong meal, they get angry too!',
+    img: waiterimg,
+    gif: '',
+    alt: 'Waiter Simulator',
+    developers: 'Felipe Guimarães',
+    codeLink: 'https://github.com/guimafelipe/very-realistic-waiter-simulator',
+    demoLink: 'https://flpguima.itch.io/very-realistic-waiter-simulator',
+    year: '2018'
+  },
+  {
+    name: 'Awakening',
+    info: 'You awake up alone in a stunning island and can’t remember anything of what happened. Now the only thing left is to solve a number of puzzles that you find that allows you to go deeper in your mind. Solve the challenges and discovery the mystery of that island!',
+    img: awakeningimg,
+    gif: '',
+    alt: 'The Awakening',
+    developers: 'Carlos Matheus, Felipe Coimbra and Luiz Henrique Aguiar',
+    codeLink: 'https://github.com/CarlosMatheus/Overhead',
+    demoLink: 'https://carlos-matheus.itch.io/the-awakening',
+    year: '2016'
+  },
+  {
+    name: 'AotD',
+    info: '(AotD) Afraid Of The Dark is a puzzle 2D indie game created for a brazilian game jam - The Game Makers Brazil - JAM #3. The game is based on be under lights and avoid darkness as you have to solve problems about sudden disappearances caused by an apocalyptic crysis.',
+    img: afraidimg,
+    gif: '',
+    alt: 'Afraid of the Dark',
+    developers: 'Chico Castro and Felipe Guimarães',
+    codeLink: 'https://github.com/chicomcastro/GameMakersGameJam',
+    demoLink: 'https://chicomcastro.itch.io/afraid-of-the-dark',
+    year: '2017'
   }
-  // {
-  //   name: 'Ricochette',
-  //   info: 'Ricochette is a two-player shooter game. Play against your friends and remember... the more you shoot, the worst it is not just for your opponent, but for yourself as well.',
-  //   img: ricochetteimg,
-  //   gif: ,
-  //   alt: 'Ricochette',
-  //   developers: 'Felipe Guimarães',
-  //   codeLink: 'https://github.com/guimafelipe/ricochette',
-  //   demoLink: 'https://www.kongregate.com/games/FlpGuima/ricochette'
-  // }
 ];

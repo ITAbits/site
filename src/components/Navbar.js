@@ -10,16 +10,15 @@ export default class Navbar extends Component {
         <nav className='navbar navbar-inverse navbar-fixed-top'>
           <div className='container-fluid'>
             <div className='navbar-header'>
-              <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
+              <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
                 <span className='icon-bar' />
                 <span className='icon-bar' />
                 <span className='icon-bar' />
               </button>
-              <img src={logo} id='bits-logo' />
+              <a href='/'><img src={logo} id='bits-logo' /></a>
             </div>
-            <div className='collapse navbar-collapse' id='myNavbar'>
+            <div className='collapse navbar-collapse' style={{background: 'black'}} id='myNavbar'>
               <ul className='nav navbar-nav navbar-right'>
-                <li><a href='/'>Home</a></li>
                 <li><a href='/projects'>Projetos</a></li>
                 <li><a href='/members'>Membros</a></li>
                 <li><a href='/tutorials'>Tutoriais</a></li>
