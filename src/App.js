@@ -19,10 +19,10 @@ export default class App extends Component {
       <div id="router-wrapper">
         <Navbar/>
         <Switch>
-          <Route exact path="%PUBLIC_URL%/" component={LandingPage} />
-          <Route path="%PUBLIC_URL%/projects" component={ProjectsPage} />
-          <Route path="%PUBLIC_URL%/members" component={MembersPage}/>
-          <Route path="%PUBLIC_URL%/tutorials" component={TutorialsPage} />
+          <Route exact path="https://www.itabits.com.br/" component={LandingPage} />
+          <Route path="https://www.itabits.com.br/projects" component={ProjectsPage} />
+          <Route path="https://www.itabits.com.br/members" component={MembersPage}/>
+          <Route path="https://www.itabits.com.br/tutorials" component={TutorialsPage} />
         </Switch>
       </div>
     </Router>
