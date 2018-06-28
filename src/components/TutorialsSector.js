@@ -13,7 +13,6 @@ export default props => {
         <h3>TUTORIAIS</h3>
         <p>
           Gostou do que fazemos e ficou interessado no assunto? Sabia que a ITABits possui material disponível online e gratuitamente para você aprender a programar?
-          Visite já nossos tutoriais e aprenda a programar hoje!
         </p>
 
         <Grid centered stackable columns={2}>

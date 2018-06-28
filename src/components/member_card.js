@@ -16,8 +16,8 @@ export default props => {
               <Card.Meta>
                 20{props.since} - 20{props.to}
               </Card.Meta>
-              <a href={props.github}><Icon name='github square'/></a>
-              <a href={props.linkedin}><Icon name='linkedin square'/></a>
+              <a href="https://github.com/ITAbits"><Icon name='github square'/></a>
+              <a href="https://www.linkedin.com/company/itabits/"><Icon name='linkedin square'/></a>
             </Card.Content>
           </Card>
         </div>

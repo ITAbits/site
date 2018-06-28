@@ -86,7 +86,7 @@ export default [
     gif: '',
     alt: 'The Awakening',
     developers: 'Carlos Matheus, Felipe Coimbra and Luiz Henrique Aguiar',
-    codeLink: 'https://github.com/CarlosMatheus/Overhead',
+    codeLink: 'https://github.com/CarlosMatheus/The-Awakening',
     demoLink: 'https://carlos-matheus.itch.io/the-awakening',
     year: '2016'
   },
