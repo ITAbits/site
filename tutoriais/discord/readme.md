@@ -13,15 +13,15 @@ O Discord pode rodar no seu computador, celular, tablet, e até mesmo no seu nav
 
 Acesse https://discordapp.com/. Na parte superior esquerda do site, clique em Baixar.
 
-![](/tutoriais/discord/imagens/tutorial/01.png)
+![](./imagens/tutorial/01.png)
 
 Faça download do instalador correspondente à sua plataforma.
 
-![](/tutoriais/discord/imagens/tutorial/02.png)
+![](./imagens/tutorial/02.png)
  
 Clique no instalador para que a instalação seja iniciada. Caso apareça uma janela perguntando se você deseja executá-lo, basta clicar em Executar.
 
-![](/tutoriais/discord/imagens/tutorial/03.png)
+![](./imagens/tutorial/03.png)
  
 Após isto, a instalação provavelmente ocorrerá sem interrupções. 
 
@@ -30,31 +30,31 @@ Após isto, a instalação provavelmente ocorrerá sem interrupções.
 
 Quando a instalação terminar, o aplicativo provavelmente iniciará sozinho. Caso isso não aconteça, encontre o ícone do Discord na sua Área de Trabalho e clique duas vezes.
  
-![](/tutoriais/discord/imagens/tutorial/04.png)
+![](./imagens/tutorial/04.png)
 
 A tela de carregamento do Discord irá aparecer.
  
-![](/tutoriais/discord/imagens/tutorial/05.png)
+![](./imagens/tutorial/05.png)
 
 Na tela de Login do Discord, clique em Cadastre-se.
  
-![](/tutoriais/discord/imagens/tutorial/06.png)
+![](./imagens/tutorial/06.png)
 
 Preencha seus dados e clique em Continuar.
  
-![](/tutoriais/discord/imagens/tutorial/07.png)
+![](./imagens/tutorial/07.png)
 
 Após isto, provavelmente o Discord fará login automático para você. Se não fizer, entre com o email e senha que você colocou no cadastro. Você será redirecionado para a tela abaixo, onde terá que fazer a verificação tanto por email quanto por telefone.
  
-![](/tutoriais/discord/imagens/tutorial/08.png)
+![](./imagens/tutorial/08.png)
 
 Pra verificar pelo email, clique em Verificar Por E-Mail. Depois, vá na Caixa de Entrada do email que você colocou em cadastro, olhe o email que você recebeu do Discord, e clique no link que está lá. Se tudo der certo, o retângulo de Verificar Por Email vai sair do seu Discord (talvez precise relogar, n me lembro). Provavelmente você ainda vai ter que verificar também pelo telefone. Para isso, clique em Verificar Pelo Telefone. A tela abaixo irá aparecer pra você. Coloque o número de telefone seu ou de um coleguinha (importante que telefone possa receber SMS).
 
-![](/tutoriais/discord/imagens/tutorial/09.png)
+![](./imagens/tutorial/09.png)
 
 Você vai receber no celular um SMS com seis dígitos. Coloque eles na tela que vai aparecer no discord.
 
-![](/tutoriais/discord/imagens/tutorial/10.png)
+![](./imagens/tutorial/10.png)
  
 Feito isso, você estará logado e pronto pra usar o Discord.
 
@@ -63,7 +63,7 @@ Feito isso, você estará logado e pronto pra usar o Discord.
 
 Após ter feito as verificações, a seguinte tela do Discord irá aparecer pra você.
 
-![](/tutoriais/discord/imagens/tutorial/11.png)
+![](./imagens/tutorial/11.png)
 
 Legendas:
 - Amarelo - Aqui o Discord irá mostrar seus contatos (em verde) e as mensagens privadas (em roxo) que você trocou. Você pode conectar suas contas de redes sociais e jogos para achar os seus amigos que possuem Discord. Além de poder adicionar as pessoas que você encontrar em grupos do Discord. 
@@ -74,13 +74,13 @@ Legendas:
 Nas configurações pessoais, você pode alterar dados da sua conta e configurações do aplicativo.
 Inicialmente, recomendo que configure as suas notificações. Nessa parte muda do celular pro computador, então vou deixar aqui prints da minha configuração em cada dispositivo. No PC:
 
-![](/tutoriais/discord/imagens/tutorial/12.png)
+![](./imagens/tutorial/12.png)
 
-![](/tutoriais/discord/imagens/tutorial/13.png)
+![](./imagens/tutorial/13.png)
  
 Configs. No Celular:
 
-![](/tutoriais/discord/imagens/tutorial/14.png)
+![](./imagens/tutorial/14.png)
  
 Quando você se acostumar com o aplicativo, fique à vontade pra alterar essas configurações caso queira ou precise. As configurações de voz e vídeo, por exemplo, podem ser relevantes em outros contextos que não o da ITA Bits. 
 
@@ -91,11 +91,11 @@ Vale mencionar também que o Discord vem pré-configurado pra iniciar junto com 
 
 Para entrar no grupo da Bits, clique no link que você recebeu por email. Uma nova aba vai ser aberta no seu navegador, e após ela ser carregada, vá até o seu Discord. Lá irá aparecer o seguinte:
 
-![](/tutoriais/discord/imagens/tutorial/15.png)
+![](./imagens/tutorial/15.png)
 
 Pode fechar a aba que foi aberta no navegador. No Discord, o que você irá ver agora é isto:
 
-![](/tutoriais/discord/imagens/tutorial/16.png)
+![](./imagens/tutorial/16.png)
 
 Legendas:
 
