@@ -40,6 +40,7 @@ def addmember():
         else:
             return jsonify(memberid=None, status="missing key")
     except Exception as e:
+        print(e)
         return jsonify(memberid=None, status="404")
 
 
