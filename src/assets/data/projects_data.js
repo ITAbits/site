@@ -42,18 +42,18 @@ export default [
     codeLink: 'https://github.com/vcanaa',
     demoLink: 'https://play.google.com/store/apps/details?id=com.baldbeangames.pandoodlefull&hl=en',
     year: '2011'
+  },
+  {
+    name: 'Falldawn',
+    info: 'FallDawn é um jogo que foi desenvolvido por alunos do ita com o intuito de competir na competição de jogos Sbgames 2009. O jogo utiliza a engine gráfica opensource Ogre3d, e a engine física Nvidia PhysX com a biblioteca wrapper NxOgre. Nosso projeto conta com um ragdoll desenvolvido por nós mesmos. Também criamos alguns efeitos gráficos com o uso de shaders.',
+    img: falldawnimg,
+    gif: falldawngif,
+    alt: 'Falldawn',
+    developers: 'Lucas Mattos e Marcos Máximo',
+    codeLink: 'https://github.com/deusdaluz',
+    demoLink: 'https://www.youtube.com/watch?time_continue=1&v=rtF50nlVCCw',
+    year: '2009'
   }
-  // {
-  //   name: 'Falldawn',
-  //   info: 'FallDawn é um jogo que foi desenvolvido por alunos do ita com o intuito de competir na competição de jogos Sbgames 2009. O jogo utiliza a engine gráfica opensource Ogre3d, e a engine física Nvidia PhysX com a biblioteca wrapper NxOgre. Nosso projeto conta com um ragdoll desenvolvido por nós mesmos. Também criamos alguns efeitos gráficos com o uso de shaders.',
-  //   img: falldawnimg,
-  //   gif: falldawngif,
-  //   alt: 'Falldawn',
-  //   developers: 'Lucas Mattos e Marcos Máximo',
-  //   codeLink: 'https://github.com/deusdaluz',
-  //   demoLink: 'https://www.youtube.com/watch?time_continue=1&v=rtF50nlVCCw',
-  //   year: '2009'
-  // }
   // {
   //   name: 'Ricochette',
   //   info: 'Ricochette is a two-player shooter game. Play against your friends and remember... the more you shoot, the worst it is not just for your opponent, but for yourself as well.',

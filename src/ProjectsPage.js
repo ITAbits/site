@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { Grid, Container } from 'semantic-ui-react'
 import ProjectCard from './components/ProjectCard'
 import projectsArray from './assets/data/projects_data'
-import {Sidebar, Button, Segment} from 'semantic-ui-react'
+import {Button} from 'semantic-ui-react'
 import './style/ProjectsPage.css'
 
 class ProjectsPage extends Component {
@@ -29,7 +30,6 @@ class ProjectsPage extends Component {
     this.selectCardFromList = (year) => {
       console.log('TESTING YEAR ', year)
       this.cardDivList = document.getElementsByClassName('card col m6 s12 l4')
-      // console.log(this.cardDivList.length)
 
       for (var i = 0; i < this.cardDivList.length; i++) {
         // this.cardDivList[i].className = this.cardList[i].year === '2018' ? 'card col m6 s12 l4' : 'card-hidden'
@@ -49,21 +49,23 @@ class ProjectsPage extends Component {
     return (
       <section id='projects'>
         <h1>Projects<a href='/projects' /></h1>
-        <Button class="year-btn" onClick={() => {
+        <Button class='year-btn' onClick={() => {
           this.selectCardFromList('All')
         }}>ALL</Button>
-        <Button class="year-btn" onClick={() => {
+        <Button class='year-btn' onClick={() => {
           this.selectCardFromList('2018')
         }}>2018</Button>
-        <Button class="year-btn" onClick={() => {
+        <Button class='year-btn' onClick={() => {
           this.selectCardFromList('2017')
         }}>2017</Button>
-        <Button class="year-btn" onClick={() => {
+        <Button class='year-btn' onClick={() => {
           this.selectCardFromList('2011')
         }}>2011</Button>
-        <div className='row'>
-          {this.cardList}
-        </div>
+        <Container>
+          <Grid stackable centered columns={3}>
+            {this.cardList}
+          </Grid>
+        </Container>
       </section>
     )
   }

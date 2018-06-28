@@ -14,7 +14,6 @@ export default props => {
           <br /><br />
           <img className='footimg' src={logo} alt='Logo' />
         </p>
-        <hr className='dark-line' />
         <a href='https://www.facebook.com/itabits/'><img className='icon' src={facebook} alt='Logo' /></a>
         <a href='https://www.linkedin.com/company/itabits/'><img className='icon' src={linkedin} alt='Logo' /></a>
         <a href='https://github.com/ITAbits'><img className='icon' src={github} alt='logo' /></a>
