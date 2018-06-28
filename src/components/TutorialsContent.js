@@ -10,6 +10,7 @@ import discord from "../assets/data/tutoriais/discord/readme.md";
 import cCsharp from "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/README.md";
 import helloW from "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Primeiro-Projeto-(Windows).md";
 import princDif from "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Principais-Diferencas.md";
+import unity from "../assets/data/tutoriais/unity/test.md";
 
 import TUTORIAL_DATA from "../assets/data/tutoriais/tutorials.json";
 
@@ -17,6 +18,7 @@ const discordPath = "../assets/data/tutoriais/discord/readme.md";
 const cCsharpPath = "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/README.md";
 const helloWPath = "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Primeiro-Projeto-(Windows).md";
 const princDifPath = "../assets/data/tutoriais/ccsharp/docs/De-C-para-C#/Principais-Diferencas.md";
+const unityPath = "../assets/data/tutoriais/unity/test.md";
 
 class TutorialsContent extends Component {
     constructor(props) {
@@ -57,6 +59,7 @@ class TutorialsContent extends Component {
         else if( contentSrc === cCsharpPath ) trueContentSrc = cCsharp;
         else if ( contentSrc === helloWPath ) trueContentSrc = helloW;
         else if ( contentSrc === princDifPath ) trueContentSrc = princDif;
+        else if ( contentSrc === unityPath ) trueContentSrc = unity;
 
         fetch(trueContentSrc)
             .then(res => res.text())
