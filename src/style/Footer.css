@@ -1,0 +1,43 @@
+.copyrights{
+    margin-top:25px;
+}
+
+footer.container-fluid.text-center.foot {
+    background: #383838;
+}
+
+.dark-line{
+    border-top: 1px solid #525252;
+}
+
+.white-txt{
+    color: #FFF;
+}
+
+a.link {
+    color: #008acc;
+    border: 1px #008acc solid;
+    padding: 5px;
+    text-decoration: none;
+}
+
+a.link:hover {
+    background: #008acc;
+    color: #383838;
+}
+
+.footimg{
+    width: 5rem;
+}
+
+.white-txt-small {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.icon{
+    width: 1.5em;
+    height: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+}

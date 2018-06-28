@@ -1,24 +1,28 @@
 import React from 'react'
-import { Icon, Grid, Container } from 'semantic-ui-react'
+import '../style/Footer.css'
+import logo from '../assets/images/landing-page/itabits-logo.png'
 
+import facebook from '../assets/images/footer/facebook.png'
+import linkedin from '../assets/images/footer/linkedin.png'
+import github from '../assets/images/footer/github.png'
 
 export default props => {
-  return (
-    <div>
-      <Container textAlign='center'>
-          <Grid centered columns={2} verticalAlign='middle'>
-            <Grid.Row centered columns={2}>
-            <Grid.Column>
-              Contato:<br/>
-              itabits@gmail.com
-            </Grid.Column>
-            <Grid.Column>
-              Institucional:<br/>
-              <a href={props.github}><Icon name='github square'/></a>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
-    </div>
-  );
+  return <div>
+    <footer className='container-fluid text-center foot'>
+      <div className='copyrights'>
+        <p className='white-txt'>ITABits © 2018
+          <br /><br />
+          <img className='footimg' src={logo} alt='Logo' />
+        </p>
+        <hr className='dark-line' />
+        <a href='https://www.facebook.com/itabits/'><img className='icon' src={facebook} alt='Logo' /></a>
+        <a href='https://www.linkedin.com/company/itabits/'><img className='icon' src={linkedin} alt='Logo' /></a>
+        <a href='https://github.com/ITAbits'><img className='icon' src={github} alt='logo' /></a>
+        <br /><br />
+        <p className='white-txt-small'>
+          ITABits - Desenvolvimento de Software feito por alunos do ITA!
+        </p>
+      </div>
+    </footer>
+  </div>
 }
