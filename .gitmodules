@@ -1,0 +1,3 @@
+[submodule "public/tutoriais"]
+	path = public/tutoriais
+	url = https://github.com/ITAbits/tutoriais.git
