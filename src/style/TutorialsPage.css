@@ -126,3 +126,7 @@ div.tutorialContent p {
 div.tutorialContent a {
     font-size: inherit;
 }
+
+div.tutorialContent img {
+    max-width: 100%;
+}
