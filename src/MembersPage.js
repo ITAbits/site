@@ -16,9 +16,7 @@ class MembersPage extends React.Component {
   }
 
   componentDidMount() {
-    let proxyUrl = "https://cors-anywhere.herokuapp.com/",
-        targetUrl = "https://itabits.herokuapp.com/getmembers"
-     fetch(proxyUrl+targetUrl)
+     fetch('/getmembers')
        .then(res => res.json())
        .then(
          (result) => {
