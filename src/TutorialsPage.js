@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Sidebar, Button, Segment, Sticky, Menu, Loader} from "semantic-ui-react";
+import {Sidebar, Button, Segment, Sticky, Menu, Loader, Icon} from "semantic-ui-react";
 import { Route, Switch} from "react-router-dom"
 
 import './style/TutorialsPage.css';
@@ -53,6 +53,15 @@ class TutorialsPage extends Component {
           );
     }
 
+    buttonIcon() {
+      if ( this.state.sidebarVisible ){
+        return "arrow left";
+      }
+      else {
+        return "arrow right";
+      }
+    }
+
     render() {
 
       const {contextRef, sidebarVisible, tutorialInfo} = this.state;
@@ -81,8 +90,10 @@ class TutorialsPage extends Component {
                 </Sidebar>  
 
                 <Sidebar.Pusher>
-                  <Sticky id="but" context={contextRef}>
-                    <Button onClick={this.toggleVisible}> I exist! </Button>
+                  <Sticky context={contextRef}>
+                    <Button id="sidebarButton" onClick={this.toggleVisible}>
+                      <Icon inverted name={this.buttonIcon()} />
+                    </Button>
                   </Sticky>
                   <Switch>
                     <Route exact path={`${this.path}`} component={TutorialsHome}/>

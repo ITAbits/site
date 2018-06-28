@@ -1,7 +1,8 @@
 import React from 'react'
-import { Icon, Container, Header, Grid, Button, Modal, Image } from 'semantic-ui-react'
+import { Icon, Container, Header, Grid, Button, Modal, Image, Loader, Dimmer } from 'semantic-ui-react'
 import peopleArray from './assets/data/people_data'
 import MemberCard from './components/member_card.js'
+import {browserHistory} from 'react-router';
 
 
 class MembersPage extends React.Component {
@@ -22,9 +23,11 @@ class MembersPage extends React.Component {
        .then(
          (result) => {
            result.members.sort(function(a, b){
-               if(a.to > b.to)
-                  return true;
-              return a.since < b.since;
+              if(a.to != b.to)
+                return a.to < b.to;
+              if(a.sice != b.since)
+                return a.since < b.since;
+              return a.callby < b.callby;
             });
            this.setState({
              isLoaded: true,
@@ -54,19 +57,33 @@ class MembersPage extends React.Component {
           );
       });
 
-      return (
-          <div class="members" style={{color:'white'}}>
-            <br></br><br></br><br></br>
+      if(this.state.isLoaded) {
+        return (
+            <div class="members" style={{color:'white'}}>
+              <br></br>
+                <h1 style={{color:'white'}}>Membros</h1>
+                <Container card>
+                    <Grid doubling centered columns={6}>
+                        {members}
+                    </Grid>
+                </Container>
+                <br></br>
+                <br></br>
+            </div>
+        )
+      } else {
+        return (
+          <div class="members" style={{color:'white', height: '100vh'}}>
+            <br></br>
               <h1 style={{color:'white'}}>Membros</h1>
-              <Container card>
-                  <Grid doubling centered columns={6}>
-                      {members}
-                  </Grid>
-              </Container>
+                <Dimmer active>
+                  <Loader size='massive'></Loader>
+                </Dimmer>
               <br></br>
               <br></br>
           </div>
-      )
+        )
+      }
     }
 }
 
