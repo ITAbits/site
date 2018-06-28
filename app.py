@@ -30,8 +30,10 @@ def addmember():
             callby = request.form['callby']
             since = request.form['since']
             to = request.form['to']
+            github = request.form['github']
+            linkedin = request.form['linkedin']
 
-            member = Member(firstname, secondname, callby, since, to, imagelink)
+            member = Member(firstname, secondname, callby, since, to, imagelink, github, linkedin)
 
             db.session.add(member)
             db.session.commit()
