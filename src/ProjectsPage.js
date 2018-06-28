@@ -28,7 +28,6 @@ class ProjectsPage extends Component {
     })
 
     this.selectCardFromList = (year) => {
-      console.log('TESTING YEAR ', year)
       this.cardDivList = document.getElementsByClassName('card col m6 s12 l4')
 
       for (var i = 0; i < this.cardDivList.length; i++) {
@@ -48,7 +47,8 @@ class ProjectsPage extends Component {
   render () {
     return (
       <section id='projects'>
-        <h1>Projects<a href='/projects' /></h1>
+        <h1>Projetos<a href='/projects' /></h1>
+        <p style={{color:'white'}}>desenvolvimentos por membros em</p>
         <Button class='year-btn' onClick={() => {
           this.selectCardFromList('All')
         }}>ALL</Button>
