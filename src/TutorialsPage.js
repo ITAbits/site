@@ -72,13 +72,13 @@ class TutorialsPage extends Component {
         else
       {
         return (
-            <div className="tutorialsPage" ref={this.handleContextRef}>
+            <div className="tutorialsPage" ref={this.handleContextRef}> 
               <Sidebar.Pushable>
-
+  
                 <Sidebar id="tutorialsSidebar" as={Menu} animation="push" visible={sidebarVisible}
                          direction="left" vertical inverted>
                   <TutorialsList parentPath={this.path} list={tutorialInfo['tutorials']}/>
-                </Sidebar>
+                </Sidebar>  
 
                 <Sidebar.Pusher>
                   <Sticky id="but" context={contextRef}>
