@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.3af2dc4d.css",
-  "main.css.map": "static/css/main.3af2dc4d.css.map",
-  "main.js": "static/js/main.d0e21b98.js",
-  "main.js.map": "static/js/main.d0e21b98.js.map",
+  "main.css": "static/css/main.cc19f65a.css",
+  "main.css.map": "static/css/main.cc19f65a.css.map",
+  "main.js": "static/js/main.4566afae.js",
+  "main.js.map": "static/js/main.4566afae.js.map",
   "static/media/Montserrat-Regular.otf": "static/media/Montserrat-Regular.91696e09.otf",
   "static/media/Roboto-Bold.woff": "static/media/Roboto-Bold.eed9aab5.woff",
   "static/media/Roboto-Bold.woff2": "static/media/Roboto-Bold.c0f1e4a4.woff2",
@@ -14,6 +14,8 @@
   "static/media/Roboto-Regular.woff2": "static/media/Roboto-Regular.5136cbe6.woff2",
   "static/media/Roboto-Thin.woff": "static/media/Roboto-Thin.44b78f14.woff",
   "static/media/Roboto-Thin.woff2": "static/media/Roboto-Thin.1f35e6a1.woff2",
+  "static/media/aotd.png": "static/media/aotd.757537b9.png",
+  "static/media/awakening.jpg": "static/media/awakening.c3c6a45d.jpg",
   "static/media/background-image-projects.png": "static/media/background-image-projects.42cedd60.png",
   "static/media/background-projects.jpg": "static/media/background-projects.105f0798.jpg",
   "static/media/balance.gif": "static/media/balance.5ca1dc6a.gif",
@@ -25,7 +27,7 @@
   "static/media/csharp.png": "static/media/csharp.81eda716.png",
   "static/media/discord.png": "static/media/discord.a72c86ca.png",
   "static/media/falldawn.gif": "static/media/falldawn.8c46b2c9.gif",
-  "static/media/falldawn.png": "static/media/falldawn.a559c066.png",
+  "static/media/falldawn.png": "static/media/falldawn.715b0f63.png",
   "static/media/flags.png": "static/media/flags.9c74e172.png",
   "static/media/github.png": "static/media/github.9ac279f9.png",
   "static/media/icons.eot": "static/media/icons.8e3c7f55.eot",
@@ -44,5 +46,6 @@
   "static/media/overhead.png": "static/media/overhead.cc7e567e.png",
   "static/media/pandoodle.gif": "static/media/pandoodle.a67fb122.gif",
   "static/media/pandoodle.jpg": "static/media/pandoodle.d68e0c34.jpg",
-  "static/media/tutorials-sector-background.jpeg": "static/media/tutorials-sector-background.e4ae0f9d.jpeg"
+  "static/media/tutorials-sector-background.jpeg": "static/media/tutorials-sector-background.e4ae0f9d.jpeg",
+  "static/media/waiter.png": "static/media/waiter.ebb88a07.png"
 }

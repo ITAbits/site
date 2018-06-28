@@ -24,7 +24,7 @@ def getmembers():
     try:
         members = [member.as_dict() for member in Member.query.all()]
         return jsonify(members=members)
-    except:
+    except Exception as e:
         return jsonify(members=None)
 
 
