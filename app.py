@@ -1,13 +1,22 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 import boto3
 import uuid
 import os
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='build')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 db = SQLAlchemy(app)
+
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    if path != "" and os.path.exists("build/" + path):
+        return send_from_directory('build', path)
+    else:
+        return send_from_directory('build', 'index.html')
 
 
 @app.route('/getmembers', methods=["GET"])
@@ -15,7 +24,7 @@ def getmembers():
     try:
         members = [member.as_dict() for member in Member.query.all()]
         return jsonify(members=members)
-    except:
+    except Exception as e:
         return jsonify(members=None)
 
 
@@ -60,9 +69,9 @@ def saveImage(file):
     return path
 
 
-@app.route('/', methods=["GET"])
-def index():
-    return render_template('index.html')
+# @app.route('/', methods=["GET"])
+# def index():
+#     return render_template('index.html')
 
 
 class Member(db.Model):
