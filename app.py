@@ -22,12 +22,12 @@ def getmembers():
 @app.route('/addmember', methods=["POST"])
 def addmember():
     try:
+        imagelink = saveImage(request.files['image'])
         firstname = request.form['firstname']
         secondname = request.form['secondname']
         callby = request.form['callby']
         since = request.form['since']
         to = request.form['to']
-        imagelink = request.form['imagelink']
 
         member = Member(firstname, secondname, callby, since, to, imagelink)
 
@@ -52,6 +52,7 @@ def saveImage(file):
     path = 'https://%s.s3.amazonaws.com/%s' % (S3_BUCKET, filename)
 
     return path
+
 
 @app.route('/', methods=["GET"])
 def index():
