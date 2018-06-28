@@ -1,5 +1,0 @@
-Flask
-gunicorn
-flask_sqlalchemy
-boto3
-psycopg2

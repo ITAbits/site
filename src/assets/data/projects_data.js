@@ -2,10 +2,12 @@ import balanceimg from '../images/projects/balance.png'
 import overheadimg from '../images/projects/overhead.png'
 import pandoodleimg from '../images/projects/pandoodle.jpg'
 import ricochetteimg from '../images/projects/ricochette.png'
+import falldawnimg from '../images/projects/falldawn.png'
 
 import balancegif from '../images/projects/balance.gif'
 import overheadgif from '../images/projects/overhead.gif'
 import pandoodlegif from '../images/projects/pandoodle.gif'
+import falldawngif from '../images/projects/falldawn.gif'
 
 export default [
   {
@@ -40,6 +42,17 @@ export default [
     codeLink: 'https://github.com/vcanaa',
     demoLink: 'https://play.google.com/store/apps/details?id=com.baldbeangames.pandoodlefull&hl=en',
     year: '2011'
+  },
+  {
+    name: 'Falldawn',
+    info: 'FallDawn é um jogo que foi desenvolvido por alunos do ita com o intuito de competir na competição de jogos Sbgames 2009. O jogo utiliza a engine gráfica opensource Ogre3d, e a engine física Nvidia PhysX com a biblioteca wrapper NxOgre. Nosso projeto conta com um ragdoll desenvolvido por nós mesmos. Também criamos alguns efeitos gráficos com o uso de shaders.',
+    img: falldawnimg,
+    gif: falldawngif,
+    alt: 'Falldawn',
+    developers: 'Lucas Mattos e Marcos Máximo',
+    codeLink: 'https://github.com/deusdaluz',
+    demoLink: 'https://www.youtube.com/watch?time_continue=1&v=rtF50nlVCCw',
+    year: '2009'
   }
   // {
   //   name: 'Ricochette',
