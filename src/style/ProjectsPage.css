@@ -7,7 +7,7 @@ section#projects h1{
 }
 
 .card {
-    margin-right: 12em;
+    /*margin-right: 12em;*/
 }
 
 .card-hidden {
@@ -15,7 +15,7 @@ section#projects h1{
 }
 
 .row {
-    margin-left: 12em;
+    /*margin-left: 12em;*/
 }
 
 section#projects Button {
