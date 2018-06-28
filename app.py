@@ -6,7 +6,8 @@ import os
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://rfucmrtvfpvoeq:5214eef0596fd6eb176c63dc73049890b479bbd99f309d892ba50e268703e537@ec2-23-23-245-89.compute-1.amazonaws.com:5432/d8ie6ug9mg5s71'
 db = SQLAlchemy(app)
 
 
@@ -22,21 +23,24 @@ def getmembers():
 @app.route('/addmember', methods=["POST"])
 def addmember():
     try:
-        imagelink = saveImage(request.files['image'])
-        firstname = request.form['firstname']
-        secondname = request.form['secondname']
-        callby = request.form['callby']
-        since = request.form['since']
-        to = request.form['to']
+        if request.form['key'] == 'perguntaprowallace':
+            imagelink = saveImage(request.files['image'])
+            firstname = request.form['firstname']
+            secondname = request.form['secondname']
+            callby = request.form['callby']
+            since = request.form['since']
+            to = request.form['to']
 
-        member = Member(firstname, secondname, callby, since, to, imagelink)
+            member = Member(firstname, secondname, callby, since, to, imagelink)
 
-        db.session.add(member)
-        db.session.commit()
+            db.session.add(member)
+            db.session.commit()
 
-        return jsonify(memberid=member.id)
+            return jsonify(memberid=member.id, status="ok")
+        else:
+            return jsonify(memberid=None, status="missing key")
     except Exception as e:
-        return jsonify(memberid=None)
+        return jsonify(memberid=None, status="404")
 
 
 def saveImage(file):
