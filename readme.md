@@ -17,7 +17,7 @@ Backend - Flask
 O backend foi feito em Flask e foi construído como uma RESTful API, a qual recebe e envia arquivos em formato json (JavaScript Object Notation). Um dos endpoints disponíveis na API é
 > itabits.com.br/getmembers
 
-em que se pode consultar os membros da iniciativa. A comunicação com o frontend é feita via requisições Ajax em ReactJS e tem a seguinte forma
+em que se pode consultar os membros da iniciativa. A comunicação entre o frontend e o backend é feita via requisições Ajax em ReactJS e tem a seguinte forma
 ```
      fetch('/getmembers')
        .then(res => res.json())
@@ -31,10 +31,10 @@ em que se pode consultar os membros da iniciativa. A comunicação com o fronten
        )
 ```
 
-Em seguida, o response do request acima é injetado em cards (componentes customizados de React) e podem ser visualizados em
+Em seguida, o response do request acima é injetado em cards (componentes customizados de ReactJS) e podem ser visualizados em
 > itabits.com.br/members
 
-Para armazenamento de dados, como os dados dos membros, optou-se por PostgreSQL, armazenado em servidores [Heroku](https://www.heroku.com) e a interação com o banco de dados foi feita por meio da biblioteca [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/), a qual fornece um mapeamento objeto-relacional SQL e torna queries SQL mais simples e práticas. Para o armazenamento de imagens, optou-se por salvá-las em Buckets da [Amazon S3](https://docs.aws.amazon.com/pt_br/AmazonS3/latest/dev/Welcome.html), já que salvar imagens em banco de dados não é uma boa prática. Para a interação com os buckets da Amazon, utilizou-se a biblioteca  [boto3](https://boto3.readthedocs.io/).  
+Para armazenamento de dados, como os dados dos membros, optou-se por PostgreSQL, armazenado em servidores [Heroku](https://www.heroku.com) e a interação com o banco de dados foi feita por meio da biblioteca Python [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/), a qual fornece um mapeamento objeto-relacional SQL e torna queries SQL mais simples e práticas. Para o armazenamento de imagens, optou-se por salvá-las em Buckets da [Amazon S3](https://docs.aws.amazon.com/pt_br/AmazonS3/latest/dev/Welcome.html), já que salvar imagens em banco de dados não é uma boa prática. Para a interação com os buckets da Amazon, utilizou-se a biblioteca Python [boto3](https://boto3.readthedocs.io/).  
 
 Além disso, para se fazer o processo de deploy do site (colocar no ar), faz-se a build do frontend por meio de
 ```
@@ -95,5 +95,5 @@ Principais Dependencias
 
 Disclaimer
 ============
-###### Parte desse projeto foi desenvolvido pelos alunos [Eric Moreira](https://github.com/ericpqmor), [Felipe Coimbra](https://github.com/FelipeCoimbra) e [Igor Bragaia](https://github.com/igorbragaia) como projeto final da disciplina de CES22 ministrada pelo Professor [ Edgar Toshiro Yano](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4798593T1&idiomaExibicao=2)
+###### Parte desse projeto foi desenvolvido pelos alunos [Eric Moreira](https://github.com/ericpqmor), [Felipe Coimbra](https://github.com/FelipeCoimbra) e [Igor Bragaia](https://github.com/igorbragaia) como projeto final da disciplina de CES22 ministrada pelo Professor [ Edgar Toshiro Yano](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4798593T1&idiomaExibicao=2) em 2018/1.
 ###### *CES22 é a disciplina do ITA de programação orientada a objetos em Python :snake: :snake:*
