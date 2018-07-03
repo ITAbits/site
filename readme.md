@@ -95,5 +95,5 @@ Principais Dependencias
 
 Disclaimer
 ============
-###### Parte desse projeto foi desenvolvido como projeto final da disciplina de CES22 ministrada pelo Professor [ Edgar Toshiro Yano](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4798593T1&idiomaExibicao=2)
+###### Parte desse projeto foi desenvolvido pelos alunos [Eric Moreira](https://github.com/ericpqmor), [Felipe Coimbra](https://github.com/FelipeCoimbra) e [Igor Bragaia](https://github.com/igorbragaia) como projeto final da disciplina de CES22 ministrada pelo Professor [ Edgar Toshiro Yano](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4798593T1&idiomaExibicao=2)
 ###### *CES22 é a disciplina do ITA de programação orientada a objetos em Python :snake: :snake:*
