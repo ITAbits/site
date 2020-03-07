@@ -20,7 +20,6 @@ class LandingPage extends Component {
         <InfoSector />
         <ProjectsSector />
         <TutorialsSector />
-        <CalendarSector />
         <Footer />
       </div>
     )
