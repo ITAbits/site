@@ -1,137 +1,35 @@
-import React, { Component } from 'react';
-import {Sidebar, Button, Segment, Sticky, Menu, Loader, Icon} from "semantic-ui-react";
-import { Route, Switch} from "react-router-dom"
+import React, { Component } from "react";
 
-import './style/TutorialsPage.css';
-
-import TutorialsList from './components/TutorialsList';
-import TutorialsContent from './components/TutorialsContent';
-
-const TUTORIAL_DATA_PATH = "tutoriais/tutorials.json";
+import "./style/TutorialsPage.css";
 
 class TutorialsPage extends Component {
-    constructor(props) {
-        super(props);
+	constructor(props) {
+		super(props);
+	}
 
-        this.path = props.match.path;
+	render() {
+    
+    // TODO put this
+    let subtitle = 
+      <p>
+        Aqui Você encontra alguns dos tutoriais disponíveis no site original da bits, bem como materiais de treinamentos.
+        Você é livre para usar, distribuir ou alterar nossos treinamentos livremente, mas pedimos que cite os autores originais.
+      </p>;
 
-        // Initial state
-        this.state = {
-            sidebarVisible: true,
-            isLoaded: false,
-            tutorialInfo: null
-        };
-
-        this.toggleVisible = () => {
-          this.setState({
-            sidebarVisible: !this.state.sidebarVisible
-          })
-        };
-
-        this.handleContextRef = (contextRef) => {
-          this.setState({
-                contextRef: contextRef
-              }
-          );
-        }
-    }
-
-    componentDidMount() {
-      fetch(TUTORIAL_DATA_PATH).then(response => response.json())
-          .then( (result) => {
-                this.setState({
-                  isLoaded: true,
-                  tutorialInfo: result
-                })
-              },
-              (error) => {
-                this.setState({
-                  isLoaded: false,
-                  error
-                })
-              }
-          );
-    }
-
-    buttonIcon() {
-      if ( this.state.sidebarVisible ){
-        return "arrow left";
-      }
-      else {
-        return "arrow right";
-      }
-    }
-
-    render() {
-
-      const {contextRef, sidebarVisible, tutorialInfo} = this.state;
-      console.log(`TutorialsPage:: tutorialinfo = ${tutorialInfo}`);
-      if(this.state.isLoaded){
-        console.log(tutorialInfo);
-      }
-
-
-      if ( !this.state.isLoaded ){
-        return (
-            <div className="tutorialsPage" ref={this.handleContextRef}>
-              <Loader/>
-            </div>
-        );
-      }
-        else
-      {
-        return (
-            <div className="tutorialsPage" ref={this.handleContextRef}> 
-              <Sidebar.Pushable>
-  
-                <Sidebar id="tutorialsSidebar" as={Menu} animation="push" visible={sidebarVisible}
-                         direction="left" vertical inverted>
-                  <TutorialsList parentPath={this.path} list={tutorialInfo['tutorials']}/>
-                </Sidebar>  
-
-                <Sidebar.Pusher>
-                  <Sticky context={contextRef}>
-                    <Button id="sidebarButton" onClick={this.toggleVisible}>
-                      <Icon inverted name={this.buttonIcon()} />
-                    </Button>
-                  </Sticky>
-                  <Switch>
-                    <Route exact path={`${this.path}`} component={TutorialsHome}/>
-                    <Route exact path={`${this.path}/:tutorial`} render={(props) => {
-                      return <TutorialsContent tutorial={props.match.params.tutorial}
-                                               database={tutorialInfo}/>;
-                    }}/>
-                    <Route exact path={`${this.path}/:tutorial/:chapter`} render={(props) => {
-                      return <TutorialsContent tutorial={props.match.params.tutorial}
-                                               chapter={props.match.params.chapter}
-                                               database={tutorialInfo}/>;
-                    }}/>
-
-                  </Switch>
-                </Sidebar.Pusher>
-              </Sidebar.Pushable>
-            </div>
-        );
-      }
-    }
-}
-
-class TutorialsHome extends Component {
-  constructor(props){
-    super(props);
-  }
-
-  render(){
     return (
-        <div className="tutorialContent">
-          <h3> Bem vindo à página de tutoriais da ITABits! </h3>
-          <p>
-            Para navegar entre nossos conteúdos basta utilizar a barra de navegação lateral. Você é livre para
-            usar, distribuir ou alterar nossos treinamentos livremente mas pedimos que cite os autores originais.
-          </p>
+      <section id='tutorials'>
+        <h1>Tutoriais<a href='/tutorials' /></h1>
+        <div style={{backgroundColor: 'white', flex: 1, width: '50%' }}>
+          <div style={{flex: 1}}>
+            <img src={"https://i.gifer.com/67st.gif"} style={{width: '100%'}}></img>
+          </div>
         </div>
-    );
-  }
+        <p style={{ color: '#333333', width: 'auto', color: '#E0E0E0', marginTop: 10}}>
+          Página em construção
+        </p>
+      </section>
+    )
+	}
 }
 
 export default TutorialsPage;

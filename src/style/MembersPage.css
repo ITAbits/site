@@ -1,0 +1,15 @@
+section#members {
+    background: url("../assets/images/landing-page/tutorials-sector-background.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#members p,
+section#members h1{
+    color: #E0E0E0;
+    width: 80%;
+}

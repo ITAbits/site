@@ -31,15 +31,11 @@ class ProjectsPage extends Component {
       this.cardDivList = document.getElementsByClassName('card col m6 s12 l4')
 
       for (var i = 0; i < this.cardDivList.length; i++) {
-        // this.cardDivList[i].className = this.cardList[i].year === '2018' ? 'card col m6 s12 l4' : 'card-hidden'
         if (projectsArray[i].year === year || year === 'All') {
-          // console.log(i, " has year 2018")
           this.cardDivList[i].style.display = 'inline'
         } else {
-          // console.log(i, ' has year ', projectsArray[i].year)
           this.cardDivList[i].style.display = 'none'
         }
-        console.log(this.cardDivList.length)
       }
     }
   }
@@ -61,11 +57,13 @@ class ProjectsPage extends Component {
         <Button class='year-btn' onClick={() => {
           this.selectCardFromList('2011')
         }}>2011</Button>
-        <Container>
-          <Grid stackable centered columns={3}>
-            {this.cardList}
-          </Grid>
-        </Container>
+        <div style={{marginTop: 25}}>
+          <Container>
+            <Grid stackable centered columns={3}>
+              {this.cardList}
+            </Grid>
+          </Container>
+        </div>
       </section>
     )
   }

@@ -1,5 +1,8 @@
 section#projects {
-    background: url("../assets/images/projects/background-projects.jpg");
+    background: url("../assets/images/landing-page/background-image-projects.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section#projects h1{
