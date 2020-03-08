@@ -46,7 +46,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build && node setcname.js",
-    "deploy": "gh-pages -d build",
-    "postinstall": "npm run build:prod"
+    "deploy": "gh-pages -d build"
   }
 }
