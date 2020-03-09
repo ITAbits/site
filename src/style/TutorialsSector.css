@@ -3,7 +3,7 @@
 }
 
 #tutorials-section {
-    padding: 2em 2em;
+    padding: 6em 3rem;
     background: url("../assets/images/projects/background-projects.jpg");
 }
 
@@ -14,7 +14,7 @@
 #tutorials-section img {
     height: auto;
     width: 40%;
-    horiz-align: center;
+    align-content: center;
     vertical-align: center;
 }
 
