@@ -4,6 +4,7 @@ import '../node_modules/materialize-css/dist/js/materialize.min.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 // import logo from './logo.svg'; TODO: pegar o logo da itabits
 import Navbar from './components/Navbar'
+import ScrollToTop from './utils/scropToTop'
 
 import './App.css'
 
@@ -23,6 +24,7 @@ export default class App extends Component {
     return (
     <Router>
       <div id="router-wrapper">
+        <ScrollToTop />
         <Navbar/>
         <Switch>
           <Route exact path={home} component={LandingPage} />
