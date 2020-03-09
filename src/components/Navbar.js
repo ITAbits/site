@@ -19,10 +19,10 @@ export default class Navbar extends Component {
             </div>
             <div className='collapse navbar-collapse' id='myNavbar' style={{marginTop: 8}}>
               <ul className='nav navbar-nav navbar-right'>
-                <li><a href='/'>Início</a></li>
-                <li><a href='/projects'>Projetos</a></li>
-                <li><a href='/members'>Membros</a></li>
-                <li><a href='/tutorials'>Tutoriais</a></li>
+                <li><a href='/' style={{color: "#E0E0E0"}}>Início</a></li>
+                <li><a href='/projects' style={{color: "#E0E0E0"}}>Projetos</a></li>
+                <li><a href='/members' style={{color: "#E0E0E0"}}>Membros</a></li>
+                <li><a href='/tutorials' style={{color: "#E0E0E0"}}>Tutoriais</a></li>
               </ul>
               <ul className='nav navbar-nav navbar-right' />
             </div>

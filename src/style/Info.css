@@ -22,6 +22,10 @@
     /*padding-right: 5%;*/
 }
 
+#info-section img{
+    margin: 0 auto;
+}
+
 #info-container h5 {
     text-weight: normal;
 }
