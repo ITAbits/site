@@ -14,15 +14,15 @@ export default props => {
 				<Grid centered stackable columns={3} verticalAlign="top" style={{ marginTop: 32 }}>
 					<Grid.Row centered columns={3} style={{padding: 0,}}>
 						<Grid.Column>
-							<Image ui centered image src={Balloon} />
+							<Image ui src={Balloon} />
 						</Grid.Column>
 
 						<Grid.Column>
-							<Image ui centered image src={Gaming} />
+							<Image ui src={Gaming} />
 						</Grid.Column>
 
 						<Grid.Column>
-							<Image ui centered image src={Training} />
+							<Image ui src={Training} />
 						</Grid.Column>
 					</Grid.Row>
 					<Grid.Row centered columns={3} style={{padding: 0,}}>
