@@ -2,5 +2,6 @@
     width: auto;
     height: 15em;
     vertical-align: center;
-    horiz-align: center;
+    align: center;
+    margin: 3rem 0 1rem 0;
 }
