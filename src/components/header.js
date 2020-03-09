@@ -6,8 +6,8 @@ import '../style/Header.css'
 export default props => {
   return (
     <div id='header-container' style={{textAlign: 'center'}}>
-        <img class="animate-reveal animate-second logo-image" src={logo} />
-        {/*<svg class="animate-reveal animate-second" width="100vw" height="70vh">*/}
+        <img className="animate-reveal animate-second logo-image" src={logo} />
+        {/*<svg className="animate-reveal animate-second" width="100vw" height="70vh">*/}
           {/*<defs>*/}
             {/*<symbol id="red">*/}
               {/*<rect width="50" height="50" style={{fill:'rgb(211,47,47)'}}/>*/}
@@ -44,7 +44,7 @@ export default props => {
             {/*</g>*/}
           {/*</g>*/}
         {/*</svg>*/}
-        <div class="typewriter">
+        <div className="typewriter">
           <h1>itabits</h1>
         </div>
     </div>

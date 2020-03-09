@@ -7,7 +7,7 @@ export default props => {
   return (
     <div id='about-container'>
       <section id='about-section'>
-        <h3>QUEM SOMOS?</h3>
+        <h3 style={{marginBottom: 32,}}>QUEM SOMOS?</h3>
         <p>
           A ITA Bits é um grupo de desenvolvimento de software criado e mantido por alunos de graduação do Instituto Tecnológico de Aeronáutica (ITA).
           O objetivo da equipe é centralizar o desenvolvimento de software em um ambiente onde as pessoas possam aprender e produzir juntas.
@@ -21,7 +21,7 @@ export default props => {
           essa mesma competição em 2007 estava auxiliando o grupo de segundanistas. O projeto ganhou a Feira de Ciências do ITA. Em 2009, esse grupo de amigos levou o projeto
           para frente: assim surgia a ITA Bits.
         </p>
-        <a href="/members"><button className='goto-button'><span>SAIBA MAIS</span></button></a>
+        <a href="/members"><button className='goto-button' style={{marginTop: 32,}}><span>SAIBA MAIS</span></button></a>
       </section>
     </div>
   )

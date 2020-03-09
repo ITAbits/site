@@ -8,9 +8,9 @@ import github from '../assets/images/footer/github.png'
 
 export default props => {
   return <div>
-    <footer className='container-fluid text-center foot'>
+    <footer className='container-fluid text-center foot' style={{paddingTop: 12, paddingBottom: 12}}>
       <div className='copyrights'>
-        <p className='white-txt'>ITABits © 2018
+        <p className='white-txt'>ITABits © 2020
           <br /><br />
           <img className='footimg' src={logo} alt='Logo' />
         </p>

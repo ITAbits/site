@@ -10,12 +10,12 @@ export default props => {
   return (
     <div id='tutorials-container'>
       <section id='tutorials-section'>
-        <h3>TUTORIAIS</h3>
+        <h3 style={{ marginBottom: 32 }}>TUTORIAIS</h3>
         <p>
           Gostou do que fazemos e ficou interessado no assunto? Sabia que a ITABits possui material disponível online e gratuitamente para você aprender a programar?
         </p>
 
-        <Grid centered stackable columns={2}>
+        <Grid centered stackable columns={2} style={{ marginTop: 16 }}>
           <Grid.Row centered columns={2}>
             <Grid.Column centered>
               <Image id='balloon' ui centered image src={CsharpIcon} />
@@ -30,7 +30,7 @@ export default props => {
           </Grid.Row>
         </Grid>
 
-        <a href='/tutorials'><button className='goto-button'><span>TUTORIAIS</span></button></a>
+        <a href='/tutorials'><button className='goto-button' style={{ marginTop: 32 }}><span>TUTORIAIS</span></button></a>
       </section>
     </div>
   )
