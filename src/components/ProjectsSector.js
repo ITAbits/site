@@ -15,7 +15,7 @@ export default props => {
 					</i>
 				</h5>
 				<a href="/projects">
-					<button className="goto-button" style={{ marginTop: 32 }}>
+					<button className="goto-button">
 						<span>DEMOS</span>
 					</button>
 				</a>

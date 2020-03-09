@@ -30,7 +30,7 @@ export default props => {
           </Grid.Row>
         </Grid>
 
-        <a href='/tutorials'><button className='goto-button' style={{ marginTop: 32 }}><span>TUTORIAIS</span></button></a>
+        <a href='/tutorials'><button className='goto-button'><span>TUTORIAIS</span></button></a>
       </section>
     </div>
   )
