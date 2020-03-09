@@ -44,17 +44,17 @@ class ProjectsPage extends Component {
     return (
       <section id='projects'>
         <h1>Projetos<a href='/projects' /></h1>
-        <p style={{color:'white'}}>desenvolvimentos por membros em</p>
-        <Button class='year-btn' onClick={() => {
+        <p style={{color:'white'}}>desenvolvidos por membros em</p>
+        <Button className='year-btn' onClick={() => {
           this.selectCardFromList('All')
         }}>ALL</Button>
-        <Button class='year-btn' onClick={() => {
+        <Button className='year-btn' onClick={() => {
           this.selectCardFromList('2018')
         }}>2018</Button>
-        <Button class='year-btn' onClick={() => {
+        <Button className='year-btn' onClick={() => {
           this.selectCardFromList('2017')
         }}>2017</Button>
-        <Button class='year-btn' onClick={() => {
+        <Button className='year-btn' onClick={() => {
           this.selectCardFromList('2011')
         }}>2011</Button>
         <div style={{marginTop: 25}}>
