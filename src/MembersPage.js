@@ -218,6 +218,7 @@ class MembersPage extends React.Component {
 		const members = this.state.items.map((item, index) => {
 			return (
 				<MemberCard
+					key={index}
 					firstname={item.firstname}
 					secondname={item.secondname}
 					callby={item.callby}
@@ -230,8 +231,8 @@ class MembersPage extends React.Component {
 
 		return (
 			<section id="members">
-				<h1 >Membros</h1>
-				<Container card>
+				<h1>Membros</h1>
+				<Container >
 					<Grid doubling centered columns={6}>
 						{members}
 					</Grid>
