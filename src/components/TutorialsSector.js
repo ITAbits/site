@@ -16,14 +16,14 @@ export default props => {
         </p>
 
         <Grid centered stackable columns={2} style={{ marginTop: 16 }}>
-          <Grid.Row centered columns={2}>
-            <Grid.Column centered>
-              <Image id='balloon' ui centered image src={CsharpIcon} />
+          <Grid.Row columns={2}>
+            <Grid.Column>
+              <Image id='balloon' ui src={CsharpIcon}/>
               <h5>Como programar em C#</h5>
             </Grid.Column>
 
             <Grid.Column>
-              <Image ui centered image src={DiscordIcon} />
+              <Image ui src={DiscordIcon}/>
               <h5>Como usar o Discord</h5>
             </Grid.Column>
 
