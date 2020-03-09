@@ -11,7 +11,7 @@ export default props => {
 					<i>
 						Paixão é a nossa marca. A ITABits foi criada para
 						centralizar o desenvolvimento de software em um ambiente
-						onde as pessoas possam aprender e produzir juntas!"
+						onde as pessoas possam aprender e produzir juntas!
 					</i>
 				</h5>
 				<a href="/projects">
