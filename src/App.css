@@ -259,6 +259,7 @@ nav {
     cursor: pointer;
     margin: 5px;
     vertical-align:middle;
+    margin: 32px 0 0 0;
 }
 
 .goto-button span {
