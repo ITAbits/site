@@ -4,7 +4,7 @@
   "homepage": "https://www.itabits.com.br",
   "private": true,
   "dependencies": {
-    "ajv": "^6.5.0",
+    "ajv": "^6.12.3",
     "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "bourbon": "^5.0.1",
